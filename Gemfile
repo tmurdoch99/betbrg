@@ -6,9 +6,20 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-ui-rails'
+  gem "acts_as_follower", '~> 0.1.1'
+  gem 'faker', '1.1.2'
+  gem 'will_paginate', '3.0.4'
+  gem 'bootstrap-will_paginate', '0.0.9'
+  gem 'amistad'
+  gem 'omniauth-facebook'
+  gem 'chosen-rails'
+  gem "select2-rails"
+  gem "mailboxer"
+  gem "font-awesome-rails"
 end
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 2.3.2.2'
+
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
@@ -20,6 +31,7 @@ group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git'
 end
 group :development, :test do
   gem 'factory_girl_rails'

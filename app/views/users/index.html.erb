@@ -1,4 +1,5 @@
 <h3>Users</h3>
+<%= will_paginate %>
 <div class="span8">
 <table class="table table-condensed">
   <thead>
@@ -23,8 +24,10 @@
         <%= render user %>
       </td>
       <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
-    </tr>
+     <td><%= link_to("Friend request", @friendship_created, :class => 'btn btn-mini') %></td>
+	</tr>
   <% end %>
   </tbody>
 </table>
+<%= will_paginate %>
 </div>

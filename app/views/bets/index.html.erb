@@ -1,0 +1,32 @@
+<div class="page-title">	
+<h1>Listing bets</h1>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bet</th>
+    <th>Terms</th>
+    <th>Deadline</th>
+    <th>Forefeit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bets.each do |bet| %>
+  <tr>
+    <td><%= bet.name %></td>
+    <td><%= bet.bet %></td>
+    <td><%= bet.terms %></td>
+    <td><%= bet.deadline %></td>
+    <td><%= bet.forefeit %></td>
+    <td><%= link_to 'Show', bet %></td>
+    <td><%= link_to 'Edit', edit_bet_path(bet) %></td>
+    <td><%= link_to 'Destroy', bet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bet', new_bet_path %>

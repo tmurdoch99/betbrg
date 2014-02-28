@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @bet.name %>
+</p>
+
+<p>
+  <b>Bet:</b>
+  <%= @bet.bet %>
+</p>
+
+<p>
+  <b>Terms:</b>
+  <%= @bet.terms %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%= @bet.deadline %>
+</p>
+
+<p>
+  <b>Forefeit:</b>
+  <%= @bet.forefeit %>
+</p>
+
+
+<%= link_to 'Edit', edit_bet_path(@bet) %> |
+<%= link_to 'Back', bets_path %>

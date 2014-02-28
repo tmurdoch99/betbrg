@@ -5,7 +5,7 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   config.secret_key = '55779a859ef3d86403d0df73ef003b5c333e296a647ad385a7d8f418636af20f6c367a345f434ecbe6877747e7ae30398eadcbbecf964707d13d32e410f5e9c6'
-
+  
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -185,7 +185,11 @@ Devise.setup do |config|
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
   config.reset_password_within = 6.hours
-
+  
+  
+  
+  require "omniauth-facebook"
+  config.omniauth :facebook, "1396580680606930", "92dda1fc163665768d5fca6c4f8a234b"
   # ==> Configuration for :encryptable
   # Allow you to use another encryption algorithm besides bcrypt (default). You can use
   # :sha1, :sha512 or encryptors from others authentication tools as :clearance_sha1,

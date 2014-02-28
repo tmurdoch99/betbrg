@@ -7,25 +7,28 @@
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+	
   </head>
-  <body>
-    <%# application layout styled for Bootstrap 2.3 %>
+  <body class="">
+    
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
+  
+      
+        <div class="page-container row-fluid">
+		 <%= render 'layouts/sidebar' %>
+           <!-- BEGIN PAGE CONTAINER-->
+	<div class="page-content"> 
+		<div class="content">  
               <%= render 'layouts/messages' %>
               <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
+           
+         
+         
         </div>
       </div>
-    </main>
+	  </div>
+   
   </body>
 </html>
