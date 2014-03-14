@@ -8,6 +8,10 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require pace/pace-theme-flash
+ *= require jquery-slider/css/jquery.sidr.light.css
+ *= require boostrapv3/css/bootstrap.min.css
+ *= require boostrapv3/css/bootstrap-theme.min.css
  *= require font-awesome
  *= require_self
  *= require_vendor

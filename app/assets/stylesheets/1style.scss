@@ -290,7 +290,7 @@ Page sidebar
 .notification-alert {
   width: 29px;
   height: 29px;
-  background-image: url("../img/notification-alert.png");
+  background-image: url(image_path('notification-alert.png'));
   position: absolute;
   float: right;
   right: -15px;
@@ -572,7 +572,7 @@ span.iconset {
 }
 
 .iconset {
-  background: url('../img/icon/top-tray.png') no-repeat;
+  background: url(image_path('top-tray.png')) no-repeat;
   position: relative;
   top: 1px;
   &.top-home {
@@ -1651,7 +1651,7 @@ span.iconset {
           display: block;
           width: 8px;
           height: 25px;
-          background-image: url("../img/sidebar-menu-arrow.png");
+          background-image: url(image_path('sidebar-menu-arrow.png'));
           float: right;
           position: absolute;
           right: -8px;
@@ -1832,7 +1832,7 @@ span.iconset {
 /*** Scroll to top *****/
 
 .scrollup {
-  background: url('../img/pullup.png') no-repeat;
+  background: url(image_path('pullup.png')) no-repeat;
   background-position: 0px 0px;
   width: 27px;
   height: 27px;
@@ -3746,7 +3746,7 @@ form legend, .form-view legend {
         position: relative;
         a {
           position: relative;
-          background: url('../img/icon/portlet-tray.png') no-repeat;
+          background: url(image_path('portlet-tray.png')) no-repeat;
           transition: all 0.1s linear 0s;
         }
       }
@@ -3754,7 +3754,7 @@ form legend, .form-view legend {
   }
   &.solid .grid-title .tools a {
     position: relative;
-    background: url('../img/icon/portlet-tray.png') no-repeat;
+    background: url(image_path('portlet-tray.png')) no-repeat;
     transition: all 0.1s linear 0s;
   }
   &.simple .grid-title .tools > a.remove, &.solid .grid-title .tools > a.remove {
@@ -3893,7 +3893,7 @@ form legend, .form-view legend {
       .tools {
         margin-top: 3px;
         a {
-          background: url(../img/icon/portlet-tray.png) no-repeat;
+          background: url(image_path('portlet-tray.png')) no-repeat;
           width: 23px;
           height: 23px;
         }
@@ -4109,7 +4109,7 @@ form legend, .form-view legend {
 }
 
 .status-icon {
-  background: url('../img/icon/status.png') no-repeat;
+  background: url(image_path('status.png')) no-repeat;
   position: relative;
   display: inline-block;
   margin-right: 10px;
@@ -4324,7 +4324,7 @@ div.DTTT_print_info {
     float: right;
     a {
       position: relative;
-      background: url('../img/icon/portlet-tray.png') no-repeat;
+      background: url(image_path('portlet-tray.png')) no-repeat;
       transition: all 0.1s linear 0s;
       display: inline-block;
       &.remove {
@@ -4707,7 +4707,7 @@ div.DTTT_print_info {
     }
     a {
       position: relative;
-      background: url('../img/icon/portlet-tray.png') no-repeat;
+      background: url(image_path('portlet-tray.png')) no-repeat;
       transition: all 0.1s linear 0s;
       display: inline-block;
       &.remove {
@@ -4815,7 +4815,7 @@ div.DTTT_print_info {
     margin-right: 8px;
     a {
       position: relative;
-      background: url('../img/icon/portlet-tray.png') no-repeat;
+      background: url(image_path('portlet-tray.png')) no-repeat;
       transition: all 0.1s linear 0s;
       display: inline-block;
       &.remove {
@@ -5527,7 +5527,7 @@ code {
     top: 10px;
     a {
       position: relative;
-      background: url('../img/icon/portlet-tray.png') no-repeat;
+      background: url(image_path('portlet-tray.png')) no-repeat;
       transition: all 0.1s linear 0s;
     }
     > a {
@@ -5936,7 +5936,7 @@ code {
     top: 8px;
   }
   .close {
-    background: url("../img/icon/noti-cross.png") no-repeat scroll 0 0 transparent;
+    background: url(image_path('noti-cross.png')) no-repeat scroll 0 0 transparent;
     background-position: -9px -10px;
     width: 10px;
     height: 9px;

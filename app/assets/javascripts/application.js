@@ -12,6 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/jquery-ui-1.10.1.custom.min.js
+//= require boostrapv3/js/bootstrap.min.js
+//= require breakpoints.js
+//= require jquery-unveil/jquery.unveil.min.js
+//= require jquery-block-ui/jqueryblockui.js
+//= require jquery-ui/jquery-ui-1.10.1.custom.min.js
+//= require jquery-slider/jquery.sidr.min.js
+//= require jquery-slimscroll/jquery.slimscroll.min.js
+//= require pace/pace.min.js
+//= require jquery-numberAnimate/jquery.animateNumbers.js
 //= require_vendor
 //= require_tree .
 

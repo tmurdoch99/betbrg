@@ -15,7 +15,5 @@ class User < ActiveRecord::Base
   include Amistad::FriendModel
   acts_as_messageable
   
- def name
-   return "#name"
-  end
+ 
 end
