@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   include Amistad::FriendModel
   acts_as_messageable
-  
+  mount_uploader :avatar, AvatarUploader
  
 end

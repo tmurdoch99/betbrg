@@ -17,6 +17,7 @@ group :assets do
   gem "select2-rails"
   gem "mailboxer"
   gem "font-awesome-rails"
+  gem 'carrierwave'
 end
 gem 'jquery-rails'
 
@@ -31,7 +32,7 @@ group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git'
+  
 end
 group :development, :test do
   gem 'factory_girl_rails'
