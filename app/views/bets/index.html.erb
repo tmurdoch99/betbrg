@@ -30,3 +30,40 @@
 <br />
 
 <%= link_to 'New Bet', new_bet_path %>
+
+<!-- BEGIN ANIMATED TILES -->
+	   <div class="col-md-6 col-vlg-4 col-sm-12">
+          <div class="row " >			
+            <div class="col-md-6 col-sm-6 m-b-20"  data-aspect-ratio="true">
+              <div class="live-tile slide ha " data-speed="750" data-delay="3000" data-mode="carousel">
+                  <div class="slide-front ha tiles adjust-text">
+                  <div class="user-comment-wrapper m-t-20">
+                    <div class="profile-wrapper"> <img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35"> </div>
+                    <div class="comment">
+                      <div class="user-name text-white "><span class="bold"> Jen</span> Smith </div>
+                      <p class="text-white-opacity">@ Revox</p>
+                    </div>
+                    <div class="clearfix"></div>
+                  
+                    <p class="text-white-opacity p-t-10">21 Jan</p>
+                    <h3 class="text-white no-margin">New Year <span class="semi-bold">UI Bundle <br>
+                      </span> now on webarch</h3>
+                    <p class="p-t-20 "><span class="bold">214</span> Comments <span class="m-l-10 bold">24k</span> Likes</p>
+                  </div>
+                </div>
+                <div class="slide-back ha tiles adjust-text">
+                  <div class="p-t-20 p-l-20 p-r-20 p-b-20"> <i class="fa fa-map-marker fa-2x"></i>
+                    <p class="text-white-opacity p-t-10">21 Jan</p>
+                    <h3 class="text-white no-margin">New Year <span class="semi-bold">UI Bundle <br>
+                      </span> now on webarch</h3>
+                    <p class="p-t-20 "><span class="bold">214</span> Comments <span class="m-l-10 bold">24k</span> Likes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!-- END ANIMATED TILE -->
+		   <script type="text/javascript">
+        $(document).ready(function () {
+            $(".live-tile,.flip-list").liveTile();
+        });
+</script>

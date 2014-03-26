@@ -1,6 +1,9 @@
 Betbrg::Application.routes.draw do
   
   
+  resources :fighters
+
+
   resources :bets
 
 

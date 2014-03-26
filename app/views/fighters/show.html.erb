@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @fighter.name %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= image_tag(@fighter.picture.url, alt: @fighter.name, width: "150px") %>
+</p>
+
+<p>
+  <b>Ufc:</b>
+  <%= @fighter.ufc %>
+</p>
+
+<p>
+  <b>Fight:</b>
+  <%= @fighter.fight %>
+</p>
+
+
+<%= link_to 'Edit', edit_fighter_path(@fighter) %> |
+<%= link_to 'Back', fighters_path %>
