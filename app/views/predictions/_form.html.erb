@@ -1,0 +1,82 @@
+<%= form_for(@prediction) do |f| %>
+  <% if @prediction.errors.any? %>
+    <div id="error_explanation">
+        <ul>
+      <% @prediction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="controls form-inline">
+<%= f.hidden_field :ufc, :value => "172" %>
+ <% fighters = Fighter.where(:fight => '1') %>
+  <% fighters.each do |fighter| %>
+    <%=  image_tag(fighter.picture.url, alt: fighter.name) %>
+   <%= check_box_tag(:winner, fighter.id) %>
+    <%= f.label(:winner, fighter.name) %>
+	
+<% end %>
+
+  </div>
+<div class="controls form-inline">
+<h4>What round will the fight end?</h4>
+
+	 <%= check_box_tag(:round, "1") %>
+      <%= f.label(:round, "Round 1") %>
+	  <%= check_box_tag(:round, "2") %>
+      <%= f.label(:round, "Round 2") %>
+	  <%= check_box_tag(:round, "3") %>
+      <%= f.label(:round, "Round 3") %>
+</div>
+
+
+<div class="controls form-inline">
+<h4>How will the fight end?</h4>
+	 <%= check_box_tag(:how, "1") %>
+      <%= f.label(:how, "TKO ") %>
+	  <%= check_box_tag(:how, "2") %>
+      <%= f.label(:how, "Submission") %>
+	  <%= check_box_tag(:how, "3") %>
+      <%= f.label(:how, "Decision") %>
+</div>
+  
+ <div class="controls form-inline">
+<%= f.hidden_field :ufc, :value => "172" %>
+ <% fighters = Fighter.where(:fight => '2') %>
+  <% fighters.each do |fighter| %>
+    <%=  image_tag(fighter.picture.url, alt: fighter.name) %>
+   <%= check_box_tag(:winner, fighter.id) %>
+    <%= f.label(:winner, fighter.name) %>
+	
+<% end %>
+
+  </div>
+<div class="controls form-inline">
+<h4>What round will the fight end?</h4>
+
+	 <%= check_box_tag(:round, "1") %>
+      <%= f.label(:round, "Round 1") %>
+	  <%= check_box_tag(:round, "2") %>
+      <%= f.label(:round, "Round 2") %>
+	  <%= check_box_tag(:round, "3") %>
+      <%= f.label(:round, "Round 3") %>
+</div>
+
+
+<div class="controls form-inline">
+<h4>How will the fight end?</h4>
+	 <%= check_box_tag(:how, "1") %>
+      <%= f.label(:how, "TKO ") %>
+	  <%= check_box_tag(:how, "2") %>
+      <%= f.label(:how, "Submission") %>
+	  <%= check_box_tag(:how, "3") %>
+      <%= f.label(:how, "Decision") %>
+</div>
+  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

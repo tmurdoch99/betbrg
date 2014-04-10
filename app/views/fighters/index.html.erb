@@ -14,12 +14,12 @@
 <% @fighters.each do |fighter| %>
   <tr>
     <td><%= fighter.name %></td>
-    <td><%= fighter.picture %></td>
+    <td> <%= image_tag(fighter.picture.url, alt: fighter.name, width: "150px") %></td>
     <td><%= fighter.ufc %></td>
     <td><%= fighter.fight %></td>
     <td><%= link_to 'Show', fighter %></td>
     <td><%= link_to 'Edit', edit_fighter_path(fighter) %></td>
-    <td><%= link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

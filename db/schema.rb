@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140326172717) do
+ActiveRecord::Schema.define(:version => 20140410165831) do
 
   create_table "bets", :force => true do |t|
     t.string   "name"
@@ -79,6 +79,16 @@ ActiveRecord::Schema.define(:version => 20140326172717) do
   end
 
   add_index "notifications", ["conversation_id"], :name => "index_notifications_on_conversation_id"
+
+  create_table "predictions", :force => true do |t|
+    t.integer  "ufc"
+    t.string   "winner"
+    t.integer  "round"
+    t.integer  "how"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "receipts", :force => true do |t|
     t.integer  "receiver_id"

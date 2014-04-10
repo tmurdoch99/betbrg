@@ -15,5 +15,6 @@ class User < ActiveRecord::Base
   include Amistad::FriendModel
   acts_as_messageable
   mount_uploader :avatar, AvatarUploader
- 
+  has_many :predictions
+  accepts_nested_attributes_for :predictions
 end
