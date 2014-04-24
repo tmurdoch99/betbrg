@@ -1,6 +1,11 @@
 Betbrg::Application.routes.draw do
   
   
+  devise_for :businesses
+
+  resources :candidates
+
+
   resources :predictions
 
 
@@ -8,8 +13,8 @@ Betbrg::Application.routes.draw do
 
 
   resources :bets
-
-
+  
+   
   authenticated :user do
     root :to => 'home#index'
 	

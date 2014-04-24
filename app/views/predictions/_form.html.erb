@@ -9,11 +9,12 @@
     </div>
   <% end %>
 
-<div class="controls form-inline">
+
+<div class="checkbox check-default">
 <%= f.hidden_field :ufc, :value => "172" %>
  <% fighters = Fighter.where(:fight => '1') %>
   <% fighters.each do |fighter| %>
-    <%=  image_tag(fighter.picture.url, alt: fighter.name) %>
+    <%=  image_tag(fighter.picture.url, alt: fighter.name, width: "120px") %>
    <%= check_box_tag(:winner, fighter.id) %>
     <%= f.label(:winner, fighter.name) %>
 	
@@ -22,7 +23,7 @@
   </div>
 <div class="controls form-inline">
 <h4>What round will the fight end?</h4>
-
+<div class="checkbox check-success">
 	 <%= check_box_tag(:round, "1") %>
       <%= f.label(:round, "Round 1") %>
 	  <%= check_box_tag(:round, "2") %>
@@ -30,9 +31,10 @@
 	  <%= check_box_tag(:round, "3") %>
       <%= f.label(:round, "Round 3") %>
 </div>
-
+</div>
 
 <div class="controls form-inline">
+<div class="checkbox check-success">
 <h4>How will the fight end?</h4>
 	 <%= check_box_tag(:how, "1") %>
       <%= f.label(:how, "TKO ") %>
@@ -41,8 +43,9 @@
 	  <%= check_box_tag(:how, "3") %>
       <%= f.label(:how, "Decision") %>
 </div>
-  
+  </div>
  <div class="controls form-inline">
+ <div class="checkbox check-success">
 <%= f.hidden_field :ufc, :value => "172" %>
  <% fighters = Fighter.where(:fight => '2') %>
   <% fighters.each do |fighter| %>
@@ -51,9 +54,10 @@
     <%= f.label(:winner, fighter.name) %>
 	
 <% end %>
-
+</div>
   </div>
 <div class="controls form-inline">
+<div class="checkbox check-success">
 <h4>What round will the fight end?</h4>
 
 	 <%= check_box_tag(:round, "1") %>
@@ -63,9 +67,10 @@
 	  <%= check_box_tag(:round, "3") %>
       <%= f.label(:round, "Round 3") %>
 </div>
-
+</div>
 
 <div class="controls form-inline">
+<div class="checkbox check-success">
 <h4>How will the fight end?</h4>
 	 <%= check_box_tag(:how, "1") %>
       <%= f.label(:how, "TKO ") %>
@@ -74,7 +79,7 @@
 	  <%= check_box_tag(:how, "3") %>
       <%= f.label(:how, "Decision") %>
 </div>
-  
+ </div> 
 
   <div class="actions">
     <%= f.submit %>

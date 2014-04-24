@@ -1,30 +1,7 @@
-<!-- BEGIN BLOG POST BIG IMAGE WIDGET -->
-        <div class="col-md-6 col-vlg-4 col-sm-12 ">			
-          <div class="tiles overflow-hidden full-height tiles-overlay-hover m-b-20 widget-item">
-		   <div class="controller overlay right"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-            <div class="overlayer tiles-overlay auto blue">
-              <div class="overlayer-wrapper  p-t-20 p-l-20 p-r-20 p-b-20"> <i class="fa fa-map-marker fa-2x"></i>
-                <p class="p-t-20 text-white-opacity">21 Jan</p>
-                <h3 class="text-white">New Year <span class="semi-bold">UI Bundle <br>
-                  </span> now on webarch</h3>
-                <p class="p-t-20"><span class="bold">214</span> Comments <span class="m-l-10 bold">24k</span> Likes</p>
-              </div>
-            </div>
-            <div class="overlayer bottom-left fullwidth">
-              <div class="overlayer-wrapper">
-                <div class="tiles gradient-grey p-l-20 p-r-20 p-b-20 p-t-20"> <a href="#" class="hashtags transparent"> #citymax </a> <a href="#" class="hashtags transparent"> #new york city </a> <a href="#" class="hashtags transparent"> #amazing </a>
-                  <p class="p-t-10 p-b-10 "><span class="bold">Jane Smith, John Smith, David Jester, pepper</span> post and 214 others like this.</p>
-				  
-				  <div class="profile-img-wrapper inline m-r-5">
-					<img src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="35" height="35"> 
-				  </div>
-        
-                  <input type="text" class="dark m-r-5" id="txtinput1" placeholder="Write a comment" style="width:60%">
-                  <button type="button" class="btn btn-primary">Joing Group</button>
-                </div>
-              </div>
-            </div>
-            <img src="assets/img/others/9.jpg" data-src="assets/img/others/9.jpg" data-src-retina="assets/img/others/rob.jpg" alt="" class="image-responsive-width hover-effect-img"> 
-			</div>
-        </div>
-		<!-- END BLOG POST BIG IMAGE WIDGET -->
+<% if user_signed_in? %>
+
+<% else %>
+
+<%= render 'unsigned_home' %>
+
+<% end %>
