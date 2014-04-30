@@ -1,17 +1,18 @@
 Betbrg::Application.routes.draw do
   
   
+  resources :user_details
+
+
   devise_for :businesses
 
-  resources :candidates
-
-
   resources :predictions
-
-
+ 
+   resources :candidate_searches
+   
   resources :fighters
 
-
+ 
   resources :bets
   
    
@@ -20,6 +21,7 @@ Betbrg::Application.routes.draw do
 	
   end
   root :to => "home#index"
+  
   devise_for :users
   resources :users
 end

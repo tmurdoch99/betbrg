@@ -1,4 +1,12 @@
-<h2>Sign up</h2>
+<% content_for :body_class => "error-body no-top lazy", :stlye => "background-image: url('work.jpg')" %>
+<body class="error-body no-top lazy"  data-original="assets/img/work.jpg"  style="background-image: url('assets/img/work.jpg')"> 
+<div class="container">
+ 
+<div class="row login-container animated fadeInUp">  
+        <div class="col-md-7 col-md-offset-2 tiles white no-padding">
+		 <div class="p-t-30 p-l-40 p-b-20 xs-p-t-10 xs-p-l-10 xs-p-b-10"> 
+
+     <h2 class="normal">Sign up</h2>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
@@ -9,3 +17,6 @@
   <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
 <% end %>
 <%= render "devise/shared/links" %>
+      </div>   
+  </div>
+</div>

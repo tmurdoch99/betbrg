@@ -33,6 +33,7 @@
 //= require core.js
 //= require chat.js
 //= require demo.js
+//= require widgets.js
 //= require dashboard_v2.js
 //= require jquery_ujs 
 //= require_tree .

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140423004024) do
+ActiveRecord::Schema.define(:version => 20140424123710) do
 
   create_table "bets", :force => true do |t|
     t.string   "name"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(:version => 20140423004024) do
 
   add_index "businesses", ["email"], :name => "index_businesses_on_email", :unique => true
   add_index "businesses", ["reset_password_token"], :name => "index_businesses_on_reset_password_token", :unique => true
+
+  create_table "candidate_searches", :force => true do |t|
+    t.string   "region"
+    t.string   "experience"
+    t.string   "qualifications"
+    t.string   "age"
+    t.string   "ethnicity"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "candidates", :force => true do |t|
     t.string   "region"
@@ -143,6 +153,23 @@ ActiveRecord::Schema.define(:version => 20140423004024) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "user_details", :force => true do |t|
+    t.date     "birthdate"
+    t.string   "ethnicity"
+    t.string   "university"
+    t.string   "course"
+    t.string   "past_experience"
+    t.string   "personality_traits"
+    t.string   "about_me"
+    t.string   "photo"
+    t.string   "reference_details_1"
+    t.string   "reference_details_2"
+    t.integer  "contact_number"
+    t.string   "contact_email"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

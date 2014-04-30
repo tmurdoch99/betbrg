@@ -9,8 +9,9 @@
           <h2 class="normal">Sign in to Zipwire</h2>
           <p>Looking for a part time flexible job that suits your timetable?<br></p>
           <p class="p-b-20">Sign up Now! and get connected.</p>
-		  <button type="button" class="btn btn-primary btn-cons" id="login_toggle">Login</button> or&nbsp;&nbsp;<button type="button" class="btn btn-info btn-cons" id="register_toggle"> Create an account</button>
-        </div>
+		<%= link_to 'Login', new_user_session_path, 
+                                :class => "btn btn-primary btn-cons" %>  or&nbsp;&nbsp;	<%= link_to 'Sign up', new_user_registration_path, :class=>"btn btn-info btn-cons" %>
+								</div>
 		<div class="tiles grey p-t-20 p-b-20 text-black">
 			<form id="frm_login" class="animated fadeIn">    
                   <div class="row p-t-10 m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
