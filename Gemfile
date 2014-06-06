@@ -18,8 +18,9 @@ group :assets do
   gem "mailboxer"
   gem "font-awesome-rails"
   gem 'carrierwave'
-  gem 'momentjs-rails', '~> 2.5.0'
-  gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
+  gem 'bootstrap-sass'
+  gem 'bootstrap-datepicker-rails'
+  gem 'ransack'
 end
 gem 'jquery-rails'
 

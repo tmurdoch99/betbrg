@@ -1,4 +1,4 @@
-class DatepickerInput < SimpleForm::Inputs::Base
+class BootstrapDatepickerInput < SimpleForm::Inputs::Base
   def input
     text_field_options = input_html_options.with_indifferent_access
     format =  text_field_options.delete(:format)

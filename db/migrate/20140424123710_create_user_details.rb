@@ -13,7 +13,8 @@ class CreateUserDetails < ActiveRecord::Migration
       t.string :reference_details_2
       t.integer :contact_number
       t.string :contact_email
-
+      t.integer :user_id
+	  
       t.timestamps
     end
   end

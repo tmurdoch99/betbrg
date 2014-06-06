@@ -1,10 +1,14 @@
+
+<div class="row login-container animated fadeInUp">  
+        <div class="col-md-7 col-md-offset-2 tiles white no-padding">
+		 <div class="p-t-30 p-l-40 p-b-20 xs-p-t-10 xs-p-l-10 xs-p-b-10"> 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical', :multipart => true }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
   <%= f.input :name, :autofocus => true %>
-  <%= f.file_field :avatar %>
   <%= f.input :email, :required => true %>
+  <%= f.file_field :logo, placeholder: 'Your Picture', :required => true, :input_html => { :size => '32'} %> 
   <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
   <%= f.input :password_confirmation, :required => false %>
   <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
@@ -13,3 +17,8 @@
 <h3>Cancel my account</h3>
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
 <%= link_to "Back", :back %>
+
+</div>
+			
+	</div>		
+		</div>

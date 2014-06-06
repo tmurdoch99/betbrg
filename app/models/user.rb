@@ -10,12 +10,14 @@ class User < ActiveRecord::Base
 	
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :email, :logo, :password, :password_confirmation, :remember_me, :business
   validates_presence_of :name
   include Amistad::FriendModel
   acts_as_messageable
-  mount_uploader :avatar, AvatarUploader
   has_many :predictions
+  has_many :user_details, dependent: :destroy
   has_many :fighters, through: :predictions
   accepts_nested_attributes_for :predictions
+  mount_uploader :logo, AvatarUploader
+ 
 end

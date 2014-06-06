@@ -1,6 +1,10 @@
-﻿<% if user_signed_in? %>
+﻿<% if user_signed_in? && User.where('business' => 1) %>
  
-    <div class="content">
+    
+	<% else %>
+	
+	
+	<div class="content">
     	  <!-- BEGIN DASHBOARD TILES -->
 	  <div class="row">	 
 		<div class="col-md-4 col-vlg-3 col-sm-6">
@@ -91,7 +95,7 @@
 	</div>
 	<div class="row">
 	<div class="col-md-4 col-vlg-3 col-sm-6">
-	<iframe width="360" height="300" src="//www.youtube.com/embed/UF8uR6Z6KLc" frameborder="0" allowfullscreen></iframe>
+	<iframe width="360" height="300" src="//www.youtube.com/embed/45kNqUF6kC4" frameborder="0" allowfullscreen></iframe>
 	  </div>
 	        <div class="col-md-8 col-sm-6">
                 <div class="tiles white">
@@ -134,8 +138,6 @@
                   </div>
                 </div>
               </div>
-<% else %>
 
-<%= render 'unsigned_home' %>
 
 <% end %>

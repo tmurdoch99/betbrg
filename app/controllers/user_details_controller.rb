@@ -1,8 +1,17 @@
 class UserDetailsController < ApplicationController
+ before_filter :sidebar
+  
+  def sidebar
+    @profile_complete = current_user.user_details(:photo).present?
+  
+ end
+ 
   # GET /user_details
   # GET /user_details.json
   def index
-    @user_details = UserDetail.all
+  
+   @search = UserDetail.search(params[:q])
+    @user_details = @search.result
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +23,7 @@ class UserDetailsController < ApplicationController
   # GET /user_details/1.json
   def show
     @user_detail = UserDetail.find(params[:id])
-
+    @user_detail.user = current_user
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user_detail }
@@ -25,7 +34,7 @@ class UserDetailsController < ApplicationController
   # GET /user_details/new.json
   def new
     @user_detail = UserDetail.new
-
+    @user_detail.user = current_user
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user_detail }
@@ -41,13 +50,14 @@ class UserDetailsController < ApplicationController
   # POST /user_details.json
   def create
     @user_detail = UserDetail.new(params[:user_detail])
-
+    @user_detail.user = current_user
+	
     respond_to do |format|
       if @user_detail.save
-        format.html { redirect_to @user_detail, notice: 'User detail was successfully created.' }
+        format.html { redirect_to action: "profile", notice: 'User detail was successfully created.' }
         format.json { render json: @user_detail, status: :created, location: @user_detail }
       else
-        format.html { render action: "new" }
+        format.html { render action: "new", notice: 'User detail was unsuccessfully created.'}
         format.json { render json: @user_detail.errors, status: :unprocessable_entity }
       end
     end
@@ -60,7 +70,7 @@ class UserDetailsController < ApplicationController
 
     respond_to do |format|
       if @user_detail.update_attributes(params[:user_detail])
-        format.html { redirect_to @user_detail, notice: 'User detail was successfully updated.' }
+        format.html { redirect_to action: "profile", notice: 'User detail was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -80,4 +90,22 @@ class UserDetailsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # GET /user_details/1
+  # GET /user_details/1.json
+  def profile
+    @user_detail = UserDetail.find(params[:id])
+    @user_detail.user = current_user
+	
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user_detail }
+    end
+  end
+  
+  def age
+    now = Time.now.utc.to_date
+    now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
+end
+  
 end

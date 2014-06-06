@@ -5,52 +5,50 @@
 		  <div class="page-sidebar-wrapper" id="main-menu-wrapper">
 		<!-- BEGIN MINI-PROFILE -->
 		<div class="user-info-wrapper">	
-			
-				<%= image_tag "brad.jpg", data: { src: "brad.jpg", src_retina: "brad.jpg" }, :class => 'profile-wrapper', :size => "69x69" %> 
-			
 			<div class="user-info">
-			<% if user_signed_in? %>
+			
+			<% if user_signed_in? && current_user.user_details(:photo).present? %>
+			<div class="profile-wrapper">
+			 <%= image_tag(@user_detail.photo, alt: current_user.name, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"69", height:"69") %>
+			</div>
+			</br>
+			 <% end %>   
 				<div class="greeting">Welcome</div>
-				<div class="username"><%= current_user.name %> <span class="semi-bold">Hunt</span></div>
+				<div class="username"><%= current_user.name %> </div>
 				<div class="status">Status<a href="#"><div class="status-icon green"></div>Online</a></div>
-			<% end %>
+		
 			</div>
 			
 			
 		</div>
 		<!-- END MINI-PROFILE -->
 		<!-- BEGIN SIDEBAR MENU -->	
+	
 		</br>
 		<ul>	
 			
 			<!-- BEGIN BADGE LINK -->
-			<li class="">
-				<a href="#">
-					<i class="fa fa-envelope"></i>
-					<span class="title">Messages</span>
-					<span class="badge badge-disable pull-right">203</span>
-				</a>
-			</li>
-			<!-- END BADGE LINK -->     
-			<!-- BEGIN SINGLE LINK -->
-			<li class="">
-				<a href="#">
-					<i class="fa fa-flag"></i>
-					<span class="title">Notifications</span>
-				</a>
-			</li>
-			<!-- END SINGLE LINK -->    
-			
-			<!-- BEGIN TWO LEVEL MENU -->
-			<li class="">
-				<a href="javascript:;">
-					<i class="fa fa-folder-open"></i>
-					<span class="title">Previous offers</span>
-					<span class="arrow"></span>
-				</a>
+			          <li class=""> 			 		
+					<%= link_to '<i class="fa fa-home"></i> Home'.html_safe %>
+					 </li>	
+				     <% if user_signed_in? && current_user.user_details(:contact_email).present? %>
+					
+					<li class=""> 
+					<%= link_to '<i class="fa fa-user"></i> Profile'.html_safe, profile_path(@user_detail) %>
+					 </li>	
+					
+			 		<li class=""> 
+					<%= link_to '<i class="fa fa-pencil"></i> Edit profile'.html_safe, edit_user_detail_path %>
+					 </li>	
+					<% else %>
+				<li class="">	
+					
+					<%= link_to '<i class="fa fa-pencil"></i> Create profile'.html_safe, new_user_detail_path %>
+					
 				
-			</li>
-			<!-- END TWO LEVEL MENU -->			
+			    </li>
+			<% end %>
+				
 		</ul>
 		<!-- END SIDEBAR MENU -->
 		

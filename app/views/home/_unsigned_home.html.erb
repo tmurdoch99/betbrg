@@ -17,7 +17,10 @@
                   <div class="row p-t-10 m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
 				  <div class="control-group  col-md-10">
 					<div class="checkbox checkbox check-success"> <a href="#">Trouble login in?</a>&nbsp;&nbsp;
-					  <p>Are you a business looking for part-time staff?&nbsp;&nbsp;<button type="button" class="btn btn-info btn-cons" id="register_toggle"> Create a business account</button></p>
+					 
+					  <p>Are you a business looking for part-time staff?&nbsp;&nbsp; <%= link_to 'Create a business account', new_user_registration_path, 
+                                :class => "btn btn-info btn-cons" %>  
+								</div></p>
 					</div>
 				  </div>
 				  </div>

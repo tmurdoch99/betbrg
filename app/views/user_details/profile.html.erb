@@ -1,0 +1,221 @@
+﻿<div class="content">  
+		<div class="row">
+		<p id="notice"><%= notice %></p>
+			<div class="col-md-6">
+			
+				<div class=" tiles white col-md-12 no-padding">
+					<div class="tiles green cover-pic-wrapper">						
+						<div class="overlayer bottom-right">
+							<div class="overlayer-wrapper">
+									<div class="padding-10 hidden-xs">									
+										<button type="button" class="btn btn-primary btn-small"><i class="fa fa-check"></i>&nbsp;&nbsp;Available</button> 
+									</div>
+								</div>
+						</div>
+					<%= image_tag "cover_pic.png" %>
+					</div>
+					<div class="tiles white">
+			
+						<div class="row">
+							<div class="col-md-3 col-sm-3" >
+								<div class="user-profile-pic">	
+									<%= image_tag(@user_detail.photo, alt: current_user.name, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"89", height:"89") %>
+								</div>
+								 <div class="user-mini-description">
+									<h3 class="text-success semi-bold">
+									<%= @age %>
+									</h3>
+									<h5>years old</h5>
+									
+								</div>
+							</div>
+							<div class="col-md-7 user-description-box  col-sm-5">
+								<h4 class="semi-bold no-margin"><%=current_user.name %></h4>
+								<h6 class="no-margin">Availble in <%= @user_detail.location %></h6>
+								<br>
+								<p><i class="fa fa-briefcase"></i>Worked in <%= @user_detail.past_experience %></p>
+								<p><i class="fa fa-globe"></i><%= @user_detail.social_link %></p>
+								<p><i class="fa fa-phone"></i> <%= @user_detail.contact_number %></p>
+								<p><i class="fa fa-envelope"></i> <%= @user_detail.contact_email %></p>
+							</div>
+							<div class="col-md-3  col-sm-3">
+								
+								<div class="clearfix"></div>
+							</div>				
+						</div>
+				
+				  <div class="tiles-body">
+				  <div class="row">
+					<div class="post col-md-12">
+						<div class="user-profile-pic-wrapper">
+							<div class="user-profile-pic-normal">
+									<%= image_tag(@user_detail.photo, alt: current_user.name, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"35", height:"35") %>
+								</div>
+						</div>
+						<div class="info-wrapper">					
+							<div class="username">
+								<span class="dark-text">A few words </span> about <span class="dark-text"><%=current_user.name %></span>	
+							</div>
+							<div class="info">
+							 <%= @user_detail.about_me %>
+								
+							</div>	
+							
+													
+								<div class="clearfix"></div>
+							<div class="post comments-section">
+								
+									
+									<div class="clearfix"></div>						
+							</div>
+						<div class="post comments-section">
+									
+									
+									<div class="clearfix"></div>						
+							</div>							
+						</div>	
+						<div class="clearfix"></div>	
+						<br>
+						<br>
+					</div>
+				</div>
+				</div>
+					</div>
+				</div>	
+			</div>
+			
+			
+			<div class="col-md-6">
+				<div class="row">
+				<div class="tiles white col-md-12  no-padding">			
+					<div class="tiles-body">
+						<h5 ><span class="semi-bold"><%=current_user.name %>'s Education</span>&nbsp;&nbsp;</h5>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="friend-list">
+									<div class="friend-profile-pic">
+										
+										<%= image_tag("unibuild.png", data: { src: "unibuild.png", src_retina: "unibuild.png" }, width:"35") %> 
+										
+										
+									</div>
+									<div class="friend-details-wrapper">
+										<div class="friend-name">
+										<%= @user_detail.university %>
+										</div>
+										<div class="friend-description">
+											University
+										</div>
+									</div>
+									
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="friend-list">
+									<div class="friend-profile-pic">
+										
+									<%= image_tag("uni.png", data: { src: "uni.png", src_retina: "uni.png" }, width:"35") %> 
+									
+									</div>
+									<div class="friend-details-wrapper">
+										<div class="friend-name">
+									 <%= @user_detail.course %>
+										</div>
+										<div class="friend-description">
+										Course Sector
+										</div>
+									</div>
+									
+									<div class="clearfix"></div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<br>
+				<br>
+				<div class="clearfix"></div>
+						
+							
+							
+						
+			</div>
+		
+		 
+        <div class="col-md-6">
+          <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs" id="tab-2">
+              <li class="active"><a href="#tab2work">Work Experience</a></li>
+              <li><a href="#tab2role">My Role</a></li>
+             <li><a href="#tab2ref">References</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab2work">
+                <div class="row column-seperation">
+                  <div class="col-md-6">
+                    <h3>I worked at <span class="semi-bold">avici white</span> for around <span class="semi-bold"> 
+                      36 months</span></h3>
+                  </div>
+                  <div class="col-md-6">
+                    <h3 class="semi-bold">What i brought to the team...</h3>
+                    <p class="light">hard working, honest, team player</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab2role">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>I worked as a <span class="semi-bold"> barman</span>, the  <span class="semi-bold">role </span> consisted of,'!</h3>
+                  
+                    <br>
+                   
+                  </div>
+                </div>
+              </div>
+			   <div class="tab-pane" id="tab2ref">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>Follow us & get updated!</h3>
+                    <p>Instantly connect to what's most important to you. Follow your friends, experts, favorite celebrities, and breaking news.</p>
+                    <br>
+                    <p><a href="#" class="btn-social"><i class="icon-facebook"></i></a> <a href="#" class="btn-social"><i class="icon-twitter"></i> </a> <a href="#" class="btn-social"><i class="icon-dribbble"></i></a> <a href="#" class="btn-social"><i class="icon-pinterest-sign"></i></a> <a href="#" class="btn-social"><i class="icon-tumblr"></i> </a> <a href="#" class="btn-social"><i class="icon-linkedin-sign"></i> </a> </p>
+                  </div>
+                </div>
+              </div>
+             </div>
+          </div>
+       <div class="col-md-12">
+				<div class="grid simple vertical green">
+                    <div class="grid-title no-border">
+						<h5 >Other<span class="semi-bold">&nbsp;&nbsp;Information</span>&nbsp;&nbsp;</h5>
+						<div class="grid-body no-border">
+              <div class="row-fluid">
+                              <div class="checkbox check-primary">
+							   <br>
+                     <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
+                      <label for="check1">Driving License</label>
+                      <br>
+                      <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
+                      <label for="check2">Access to a car</label>
+                             </div>
+							   <br>
+							 <div class="checkbox check-danger">
+						     <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
+                             <label for="check1">Criminal record</label>	 
+                        </div>
+						 <br>
+						  <br>
+						<div class="pull-right">
+						<%=  link_to 'Edit Profile', edit_user_detail_path(@user_detail), :class => "btn btn-primary btn-sm btn-small" %>
+						</div>	
+					</div>	
+                    </div>
+				<br>
+				<br>
+				<div class="clearfix"></div>
+		</div>
+		</div>
+	
+</div>

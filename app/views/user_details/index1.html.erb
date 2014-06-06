@@ -1,0 +1,47 @@
+<h1>Listing user_details</h1>
+
+<table>
+  <tr>
+    <th>User ID</th>
+	<th>Birthdate</th>
+    <th>Ethnicity</th>
+    <th>University</th>
+    <th>Course</th>
+    <th>Past experience</th>
+    <th>Personality traits</th>
+    <th>About me</th>
+    <th>Photo</th>
+    <th>Reference details 1</th>
+    <th>Reference details 2</th>
+    <th>Contact number</th>
+    <th>Contact email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_details.each do |user_detail| %>
+  <tr>
+    <td><%= user_detail.user_id %></td>
+	<td><%= user_detail.birthdate %></td>
+    <td><%= user_detail.ethnicity %></td>
+    <td><%= user_detail.university %></td>
+    <td><%= user_detail.course %></td>
+    <td><%= user_detail.past_experience %></td>
+    <td><%= user_detail.personality_traits %></td>
+    <td><%= user_detail.about_me %></td>
+    <td><%= image_tag( user_detail.photo, alt: current_user.name, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"35", height:"35") %></td>
+    <td><%= user_detail.reference_details_1 %></td>
+    <td><%= user_detail.reference_details_2 %></td>
+    <td><%= user_detail.contact_number %></td>
+    <td><%= user_detail.contact_email %></td>
+    <td><%= link_to 'Show', user_detail %></td>
+    <td><%= link_to 'Edit', edit_user_detail_path(user_detail) %></td>
+    <td><%= link_to 'Destroy', user_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User detail', new_user_detail_path %>

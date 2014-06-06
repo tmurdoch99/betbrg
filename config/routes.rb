@@ -1,10 +1,15 @@
 Betbrg::Application.routes.draw do
   
+   devise_for :users
+  resources :user_details do
+   resources :users
+   
+   end
+
+  match '/profile/:id', :to => 'user_details#profile', as: 'profile' 
   
-  resources :user_details
-
-
-  devise_for :businesses
+    
+   
 
   resources :predictions
  
@@ -22,6 +27,6 @@ Betbrg::Application.routes.draw do
   end
   root :to => "home#index"
   
-  devise_for :users
-  resources :users
+ 
+ 
 end

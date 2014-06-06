@@ -14,30 +14,9 @@
 			</ul>
 			<!-- END MOBILE HEADER -->
 			<!-- BEGIN LOGO -->	
-			 <%= image_tag "logo.png", data: { src: "logo.png", src_retina: "logo.png" }, :class => 'logo', :size => "116x23" %>  
+			 <%= image_tag("logo2x.png", data: { src: "logo2x.png", src_retina: "logo2x.png" }, :class => 'logo') %>  
 			<!-- END LOGO --> 
-			<!-- BEGIN LOGO NAV BUTTONS -->
-			<ul class="nav pull-right notifcation-center">	
-				<li class="dropdown" id="header_task_bar">
-					<a href="#" class="dropdown-toggle active" data-toggle="">
-						<div class="iconset top-home"></div>
-					</a>
-				</li>
-				<li class="dropdown" id="header_inbox_bar">
-					<a href="#" class="dropdown-toggle">
-						<div class="iconset top-messages"></div>
-						<span class="badge" id="msgs-badge">2</span>
-						</a>
-				</li>
-				<!-- BEGIN MOBILE CHAT TOGGLER -->
-				<li class="dropdown" id="portrait-chat-toggler" style="display:none">
-					<a href="#sidr" class="chat-menu-toggle">
-						<div class="iconset top-chat-white"></div>
-					</a>
-				</li>
-				<!-- END MOBILE CHAT TOGGLER -->				        
-			</ul>
-			<!-- END LOGO NAV BUTTONS -->
+			
 		</div>
 		<!-- END NAVIGATION HEADER -->
 		<!-- BEGIN CONTENT HEADER -->
@@ -65,16 +44,10 @@
 					<!-- BEGIN SETTINGS -->
 					<% if user_signed_in? %>
 					<li class="quicklinks"> 
-						<a data-toggle="dropdown" class="dropdown-toggle pull-right" href="#" id="user-options">						
-							<div class="iconset top-settings-dark"></div> 	
-						</a>
-						<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="user-options">
-							<li><%= link_to 'Edit account', edit_user_registration_path %></li>
-							<li><a href="#">Notifications&nbsp;&nbsp;<span class="badge badge-important animated bounceIn">2</span></a></li>
-							<li class="divider"></li>                
-							<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
-						</ul>
-					</li>
+					
+					
+					<li><%= link_to 'My account', edit_user_registration_path%></li>
+					<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
 					<!-- END SETTINGS -->
 					<% end %>
 					

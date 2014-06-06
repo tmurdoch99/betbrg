@@ -1,0 +1,48 @@
+<% @user_details.each do |user_detail| %>	  
+                <div class="row" >
+			     
+					 <!-- BEGIN MINI PROFILE -->
+                <div class="col-md-12 m-b-20">					
+				   <div class="widget-item narrow-margin">
+				  <div class="controller overlay right"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+                  <div class="tiles green  overflow-hidden full-height" style="max-height:214px">
+                    <div class="overlayer bottom-right fullwidth">
+                      <div class="overlayer-wrapper">
+                        <div class="tiles gradient-black p-l-20 p-r-20 p-b-20 p-t-20">
+                          <div class="pull-right"> <a href="#" class="hashtags transparent"> #<%= user_detail.location %> </a> </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                     <%= image_tag("10.png", data: { src: "10.png", src_retina: "10.png" }, :class => 'lazy hover-effect-img') %> </div>
+                  <div class="tiles white ">
+                    <div class="tiles-body">
+                      <div class="row">
+					  <div class="user-profile-pic text-left"> 
+						<%= image_tag(user_detail.photo, alt: current_user.name, data: { src: "user_detail.photo", src_retina: "user_detail.photo" }, width:"69", height:"69") %>
+						 <div class="pull-right m-r-20 m-t-35"> <span class="bold text-black small-text">31yrs old</span> </div>
+					  </div>
+                        <div class="col-md-5 no-padding">                          
+                          <div class="user-comment-wrapper">
+                            <div class="comment">
+                              <div class="user-name text-black bold"> <%= user_detail.user.name %> </div>
+                              <div class="preview-wrapper">@ <%= user_detail.course %> </div>
+                            </div>							  
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-7 no-padding">
+                       
+                          <div class="clearfix"></div>
+                          <div class="m-r-20 m-t-20 m-b-10  m-l-10">
+                            <p class="p-b-10"><%= user_detail.about_me %> </p>
+                            <a href="#" class="hashtags m-b-5"> #<%= user_detail.past_experience %> </a> <a href="#" class="hashtags m-b-5"> #amazing </a> <a href="#" class="hashtags m-b-5"> #citymax </a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+				<!-- END MINI PROFILE --> 
+				<% end %>
+			</div>	
