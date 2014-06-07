@@ -14,7 +14,7 @@
   <%= f.input :email, :required => true %>
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
-  <%= f.input :business, as: :boolean, boolean_style: :inline, label: false, inline_label: 'Yes, remember me'  %>
+  <%= f.input :business, as: :boolean, boolean_style: :inline, label: 'Are you a business?'  %>
   
   <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
 <% end %>

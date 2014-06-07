@@ -207,9 +207,12 @@
                         </div>
 						 <br>
 						  <br>
+						  <% if user_signed_in? && current_user == (@user_detail) %>
 						<div class="pull-right">
 						<%=  link_to 'Edit Profile', edit_user_detail_path(@user_detail), :class => "btn btn-primary btn-sm btn-small" %>
 						</div>	
+						<% else %>
+						<% end %>
 					</div>	
                     </div>
 				<br>

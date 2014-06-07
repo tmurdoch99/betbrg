@@ -21,6 +21,7 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
+  gem 'twitter'
 end
 gem 'jquery-rails'
 

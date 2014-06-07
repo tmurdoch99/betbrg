@@ -6,14 +6,18 @@ class UserDetailsController < ApplicationController
   
  end
  
+ def age(birthdate)
+  @now = Time.now.utc.to_date
+  @dob = @now.year - birthdate.year - ((@now.month > birthdate.month || (@now.month == birthdate.month && @now.day >= birthdate.day)) ? 0 : 1)
+end
+ 
   # GET /user_details
   # GET /user_details.json
   def index
-  
+    
    @search = UserDetail.search(params[:q])
-    @user_details = @search.result
-
-    respond_to do |format|
+   @user_details = @search.result
+   respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @user_details }
     end
@@ -22,13 +26,16 @@ class UserDetailsController < ApplicationController
   # GET /user_details/1
   # GET /user_details/1.json
   def show
+    
+	
     @user_detail = UserDetail.find(params[:id])
     @user_detail.user = current_user
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user_detail }
     end
-  end
+	end
+ 
 
   # GET /user_details/new
   # GET /user_details/new.json
@@ -96,6 +103,16 @@ class UserDetailsController < ApplicationController
   def profile
     @user_detail = UserDetail.find(params[:id])
     @user_detail.user = current_user
+	
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user_detail }
+    end
+  end
+  
+  def view_profile
+    @user_detail = UserDetail.find(params[:id])
+    
 	
     respond_to do |format|
       format.html # show.html.erb

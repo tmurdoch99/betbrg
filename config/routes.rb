@@ -8,7 +8,7 @@ Betbrg::Application.routes.draw do
 
   match '/profile/:id', :to => 'user_details#profile', as: 'profile' 
   
-    
+  match '/profile/:id', :to => 'user_details#profile', as: 'view_profile'   
    
 
   resources :predictions
@@ -22,10 +22,10 @@ Betbrg::Application.routes.draw do
   
    
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'user_details#index'
 	
   end
-  root :to => "home#index"
+  root :to => 'home#home'
   
  
  
