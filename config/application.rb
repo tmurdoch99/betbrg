@@ -75,7 +75,7 @@ module Betbrg
 
     # Enable the asset pipeline
 	config.assets.initialize_on_precompile=false 
-    config.assets.enabled = flase
+    config.assets.compress = false
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 	config.assets.paths << "#{Rails.root}/app/assets/plugins"
     # Version of your assets, change this if you want to expire all your assets
