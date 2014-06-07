@@ -12,7 +12,6 @@ class User < ActiveRecord::Base
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :logo, :password, :password_confirmation, :remember_me, :business
   validates_presence_of :name
-  include Amistad::FriendModel
   acts_as_messageable
   has_many :predictions
   has_many :user_details, dependent: :destroy
