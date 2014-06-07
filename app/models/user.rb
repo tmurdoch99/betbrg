@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
   has_many :user_details, dependent: :destroy
   has_many :fighters, through: :predictions
   accepts_nested_attributes_for :predictions
-  mount_uploader :logo, AvatarUploader
+  
  
 end
