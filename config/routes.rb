@@ -1,4 +1,4 @@
-Betbrg::Application.routes.draw do
+Ziphire::Application.routes.draw do
   
    devise_for :users
   resources :user_details do
