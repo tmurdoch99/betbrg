@@ -21,7 +21,7 @@
       
         <div class="page-container row-fluid">
 		
-		<% if user_signed_in? && User.where('business' => true) %>
+		<% if current_user.business %>
 		 <%= render 'layouts/sidebarbiz' %>
 		 <div class="page-content"> 
 		 <% else %>
