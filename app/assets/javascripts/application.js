@@ -42,9 +42,3 @@
 
 
 
-
-
-<script src="assets/js/core.js" type="text/javascript"></script>
-<script src="assets/js/chat.js" type="text/javascript"></script>
-<script src="assets/js/demo.js" type="text/javascript"></script>
-<script src="assets/js/dashboard_v2.js" type="text/javascript"></script>
