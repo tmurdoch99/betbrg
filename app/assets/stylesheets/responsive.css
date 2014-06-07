@@ -422,21 +422,21 @@ and (orientation : portrait) {
 	.widget{
 		margin-right:0px;
 	}
-	.row-fluid.2col {
+	.row-fluid .twocol {
 		width:48% !important;
 		margin:0px;
 		margin-bottom:10px;
 	}
-	.row-fluid [class*="span"]{
+	.row-fluid {
 		width:100% ;
 		margin:0px;
 		margin-bottom:10px;
 	}
 	
-	.row-fluid [class*="offset1"]{
+	.row-fluid {
 		margin-left:0px !important;
 	}
-	.column-seperation > div[class*="col-"]{
+	.column-seperation >{
 		border-right:none;		
 	}
 	
@@ -557,7 +557,7 @@ and (orientation : portrait) {
   		padding-left: 180px; 	
   	}
 	
-	.no-margin-grid .row-fluid [class*="span"]{
+	.no-margin-grid .row-fluid {
 		width:100% !important;
 		margin:0px;
 		margin-bottom:10px;
@@ -624,7 +624,7 @@ and (orientation : portrait) {
 	.tiles.margin-reset{
 		 margin-left: 0px;
 	}
-	.column-seperation > div[class*="span"]{
+	.column-seperation {
 		border-right:none;		
 	}
 	
