@@ -22,8 +22,8 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  gem 'pg'
-end
+   gem 'pg'
+    end
 gem 'jquery-rails'
 
 gem 'cancan'
@@ -50,3 +50,4 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
+
