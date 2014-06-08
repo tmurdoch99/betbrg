@@ -75,7 +75,7 @@ module Zipwire
     config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-	config.assets.initialize_on_precompile=false 
+	config.assets.initialize_on_precompile = false 
     
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 	config.assets.paths << "#{Rails.root}/app/assets/plugins"
