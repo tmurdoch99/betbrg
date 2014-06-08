@@ -14,7 +14,7 @@ end
   # GET /user_details
   # GET /user_details.json
   def index
-    
+   
    @find = UserDetail.search(params[:q])
    @user_details = @find.result
    

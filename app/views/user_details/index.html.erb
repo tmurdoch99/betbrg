@@ -9,7 +9,7 @@
                <div class="grid-body">
                <h3>Search<span class="semi-bold">form</span></h3>
               <p>You can use all the search options or just the ones that suit your needs.</p>
-                     <%= search_form_for @find, :html => {:class => "form-inline"} do |f| %>
+                     <%= search_form_for @find do |f| %>
 		            <div class="row form-row">
                       <div class="col-md-6">
 					    <%= f.label :location_cont, "Enter vacancy location" %>
