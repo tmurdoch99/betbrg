@@ -17,7 +17,7 @@ end
     
    
    @user_details = @search.result
-   @search = UserDetail.search(params[:q])
+   @search.result = UserDetail.search(params[:q])
    respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @user_details }
