@@ -22,7 +22,7 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  
+  gem 'fog', '~> 1.0.0'
     end
 gem 'jquery-rails'
 
