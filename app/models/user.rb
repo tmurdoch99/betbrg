@@ -12,10 +12,7 @@ class User < ActiveRecord::Base
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :logo, :password, :password_confirmation, :remember_me, :business
   validates_presence_of :name
-  has_many :predictions
-  has_many :user_details, dependent: :destroy
-  has_many :fighters, through: :predictions
-  accepts_nested_attributes_for :predictions
+  has_one :user_details
   
  
 end
