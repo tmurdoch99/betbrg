@@ -15,8 +15,8 @@ end
   # GET /user_details.json
   def index
     
-   @search = UserDetail.search(params[:q])
-   @user_details = @search.result
+   @find = UserDetail.search(params[:q])
+   @user_details = @find.result
    
    respond_to do |format|
       format.html # index.html.erb
