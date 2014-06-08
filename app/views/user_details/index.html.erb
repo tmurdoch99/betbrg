@@ -16,29 +16,7 @@
                         <%= f.text_field :location_cont, :size => '28' %>
                       </div>
                     </div> 
-                    <div class="row form-row">
-                      <div class="col-md-6">
-					     <%= f.label :past_experience_cont, "University course" %>
-                         <%= f.select :course_cont, [ "History", "Media", "English", "Maths", "Art", "Science", "Sport", "Business"],  :size => '34', :input_html => { :id => 'source'}, include_blank: true %>
-                      </div>
-                    </div>
-                     <div class="row form-row">
-                        <div class="col-md-6">
-                               <%= f.label :birthdate_gteq, "Age group" %>
-                              <%= f.text_field :birthdate_gteq, placeholder: 'Aged between....', :size => '28'  %>
-	                    </div>
-                             <div class="col-md-6">
-                           <div style="height:25px;">
-						   </div>
-                             <%= f.text_field :birthdate_lteq, placeholder: 'And', :size => '28' %>    
-                              </div>
-                    </div>
-                      <div class="row form-row">
-                         <div class="col-md-6">
-                            <%= f.label :past_experience_cont, "Past experience" %>
-                            <%= f.select :past_experience_cont, [ "Social media promoting", "Bartending", "Waitering/Waitressing", "Sales Assistants", "Supervisor", "Chef", "Kitchen porter", "Cleaner", "Cashier", "Telecommunications", "Festivals"], label: false, wrapper: false, :size => '32', :input_html => { :id => 'source'}, include_blank: true, :multiple => true %>
-                         </div>
-						</div> 
+                    
 						<br><br>
                        <div class="actions"><%= f.submit "Search", :class=> "btn btn-default btn-cons" %></div>
                    <% end %>
