@@ -22,7 +22,7 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  
+  gem 'sqlite3'
     end
 gem 'jquery-rails'
 
