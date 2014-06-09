@@ -22,8 +22,9 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  
-    end
+  gem 'sqlite3'
+  gem 'nokogiri'
+      end
 gem 'jquery-rails'
 
 gem 'cancan'
@@ -42,6 +43,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+ 
 end
 group :test do
   gem 'capybara'
