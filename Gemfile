@@ -22,10 +22,10 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  gem 'sqlite3'
-  gem 'mysql'
+  
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
+ 
           end
 gem 'jquery-rails'
 
@@ -55,6 +55,5 @@ group :test do
   gem 'launchy'
 end
 group :production do
-  gem 'pg'
-  gem 'rails_12factor', '0.0.2'
+ 
 end
