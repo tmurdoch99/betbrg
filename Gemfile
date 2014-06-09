@@ -24,6 +24,8 @@ group :assets do
   gem 'twitter'
   gem 'sqlite3'
   gem 'mysql'
+  gem 'pg'
+  gem 'rails_12factor', '0.0.2'
           end
 gem 'jquery-rails'
 
