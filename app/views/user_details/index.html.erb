@@ -9,7 +9,17 @@
                <div class="grid-body">
                <h3>Search<span class="semi-bold">form</span></h3>
               <p>You can use all the search options or just the ones that suit your needs.</p>
+                     <%= search_form_for @find do |f| %>
+		            <div class="row form-row">
+                      <div class="col-md-6">
+					    <%= f.label :location_cont, "Enter vacancy location" %>
+                        <%= f.text_field :location_cont, :size => '28' %>
+                      </div>
+                    </div> 
                     
+						<br><br>
+                       <div class="actions"><%= f.submit "Search", :class=> "btn btn-default btn-cons" %></div>
+                   <% end %>
 			</div>
           </div>
         </div>

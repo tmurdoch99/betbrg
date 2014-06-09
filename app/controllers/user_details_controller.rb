@@ -15,7 +15,13 @@ end
   # GET /user_details.json
   def index
    
-  
+   @find = UserDetail.search(params[:q])
+   @user_details = @find.result
+   
+   respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @user_details }
+    end
   end
 
   # GET /user_details/1
