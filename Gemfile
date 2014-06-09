@@ -23,6 +23,7 @@ group :assets do
   gem 'ransack'
   gem 'twitter'
   gem 'sqlite3'
+  gem 'mysql'
           end
 gem 'jquery-rails'
 
