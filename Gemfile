@@ -23,8 +23,7 @@ group :assets do
   gem 'ransack'
   gem 'twitter'
   gem 'sqlite3'
-  
-      end
+        end
 gem 'jquery-rails'
 
 gem 'cancan'
