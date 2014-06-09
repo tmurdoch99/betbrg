@@ -1,5 +1,5 @@
 <% content_for :body_class => "error-body no-top lazy", :stlye => "background-image: url('work.jpg')" %>
-<body class="error-body no-top lazy"  data-original="assets/img/work.jpg"  style="background-image: url('assets/img/work.jpg')"> 
+
 <div class="container">
  
 <div class="row login-container animated fadeInUp">  
@@ -14,7 +14,7 @@
   <%= f.input :email, :required => true %>
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
-  <%= f.input :business, as: :boolean, boolean_style: :inline, label: 'Are you a business?'  %>
+   <%= f.input :business, as: :boolean, boolean_style: :inline, :hint => 'Are you a business?', :label => false %>
   
   <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
 <% end %>
