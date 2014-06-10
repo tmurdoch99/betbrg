@@ -39,7 +39,7 @@ group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
-  
+  gem 'pg'
 end
 group :development, :test do
   gem 'factory_girl_rails'
@@ -54,5 +54,5 @@ group :test do
   gem 'launchy'
 end
 group :production do
- 
+ gem 'pg'
 end
