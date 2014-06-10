@@ -1,4 +1,4 @@
-zipwire::Application.routes.draw do
+ziphire::Application.routes.draw do
   
    devise_for :users
   resources :user_details do
