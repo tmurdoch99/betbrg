@@ -24,7 +24,7 @@ group :assets do
   gem 'twitter'
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
- 
+  gem 'activerecord-postgresql-adapter'
           end
 gem 'jquery-rails'
 
