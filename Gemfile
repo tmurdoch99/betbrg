@@ -40,6 +40,7 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'pg'
+  gem 'postgres-pr'
 end
 group :development, :test do
   gem 'factory_girl_rails'
