@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-zipwire::Application.load_tasks
+Zipwire::Application.load_tasks
