@@ -22,7 +22,6 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
  
