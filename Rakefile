@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Betbrg::Application.load_tasks
+zipwire::Application.load_tasks
