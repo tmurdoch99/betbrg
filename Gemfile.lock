@@ -314,6 +314,7 @@ DEPENDENCIES
   launchy
   mailboxer
   omniauth-facebook
+  pg
   postgres-pr
   quiet_assets
   rails (= 3.2.13)
