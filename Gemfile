@@ -7,15 +7,12 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-ui-rails'
-  gem "acts_as_follower", '~> 0.1.1'
   gem 'faker', '1.1.2'
   gem 'will_paginate', '3.0.4'
   gem 'bootstrap-will_paginate', '0.0.9'
-  gem 'amistad'
   gem 'omniauth-facebook'
   gem 'chosen-rails'
   gem "select2-rails"
-  gem "mailboxer"
   gem "font-awesome-rails"
   gem 'carrierwave'
   gem 'bootstrap-sass'
@@ -31,7 +28,6 @@ gem 'jquery-rails'
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
-gem 'rolify'
 gem 'simple_form'
 group :development do
   gem 'better_errors'
