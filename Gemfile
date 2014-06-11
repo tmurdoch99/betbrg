@@ -22,7 +22,6 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  gem 'pg'
   gem 'rails_12factor', '0.0.2'
   gem 'activerecord-postgresql-adapter'
           end
@@ -39,7 +38,6 @@ group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'pg'
   gem 'postgres-pr'
 end
 group :development, :test do
@@ -55,5 +53,4 @@ group :test do
   gem 'launchy'
 end
 group :production do
- gem 'pg'
 end

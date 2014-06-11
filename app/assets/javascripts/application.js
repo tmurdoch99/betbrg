@@ -31,7 +31,6 @@
 //= require jquery-flot/jquery.flot.resize.min.js
 //= require jquery-metrojs/MetroJs.min.js
 //= require core.js
-//= require chat.js
 //= require demo.js
 //= require widgets.js
 //= require dashboard_v2.js
