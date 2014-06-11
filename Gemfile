@@ -22,6 +22,7 @@ group :assets do
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
   gem 'activerecord-postgresql-adapter'
+  gem 'bcrypt-ruby'
           end
 gem 'jquery-rails'
 
