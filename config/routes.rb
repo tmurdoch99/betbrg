@@ -22,7 +22,7 @@ Zipwire::Application.routes.draw do
   
    
   authenticated :user do
-    root :to => 'user_details#index'
+    root :to => 'user_details#index#:id'
 	
   end
   root :to => 'home#home'
