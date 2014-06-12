@@ -2,7 +2,7 @@ Zipwire::Application.routes.draw do
   
    devise_for :users
   resources :user_details do
-   resources :users
+  
    
    end
 
@@ -22,7 +22,7 @@ Zipwire::Application.routes.draw do
   
    
   authenticated :user do
-    match '/user_details#index/:id',  :to => 'user_details#index'  , :as => :root 
+    root :to => 'user_details#index'
 	
   end
   root :to => 'home#home'
