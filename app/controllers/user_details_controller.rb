@@ -14,7 +14,8 @@ end
   # GET /user_details
   # GET /user_details.json
   def index
-   
+   @user_detail = UserDetail.find(params[:id])
+   @user_detail.user = current_user
    @search = UserDetail.search(params[:q])
    @user_details = @search.result
    respond_to do |format|
@@ -26,8 +27,7 @@ end
   # GET /user_details/1
   # GET /user_details/1.json
   def show
-    @user_detail = UserDetail.find(params[:id])
-    @user_detail.user = current_user
+    
 	@user_detail = UserDetail.find(params[:id])
     @user_detail.user = current_user
     respond_to do |format|
