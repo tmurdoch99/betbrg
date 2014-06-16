@@ -2,7 +2,7 @@ Zipwire::Application.routes.draw do
   
    devise_for :users
   resources :user_details do
-  
+  resources :users
    
    end
 
