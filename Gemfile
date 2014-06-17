@@ -23,7 +23,7 @@ group :assets do
   gem 'ransack'
   gem 'twitter'
   gem 'rails_12factor', '0.0.2'
-  gem 'activerecord-postgresql-adapter'
+  gem 'sqlite3'
           end
 gem 'jquery-rails'
 
