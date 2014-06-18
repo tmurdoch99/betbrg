@@ -10,7 +10,7 @@ Zipwire::Application.routes.draw do
   
   match '/profile/:id', :to => 'user_details#profile', as: 'view_profile'   
    
-
+  match '/user_details/:id', :to => 'user_details#index', as: 'index'
   resources :predictions
  
    resources :candidate_searches
