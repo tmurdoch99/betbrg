@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
+gem "rolify"
 gem 'simple_form'
 group :development do
   gem 'better_errors'
