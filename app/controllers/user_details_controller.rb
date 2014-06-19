@@ -101,7 +101,7 @@ end
   # GET /user_details/1.json
   def profile
     @user_detail = UserDetail.find(params[:id])
-    @user_detail.user = current_user
+    
 	
     respond_to do |format|
       format.html # show.html.erb
