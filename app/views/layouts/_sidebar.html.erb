@@ -29,7 +29,7 @@
 			
 			<!-- BEGIN BADGE LINK -->
 			          <li class=""> 			 		
-					<%= link_to '<i class="fa fa-home"></i> Home'.html_safe, user_detail_path(@user_detail) %>
+					<%= link_to '<i class="fa fa-home"></i> Home'.html_safe %>
 					 </li>	
 				     <% if user_signed_in? && current_user.user_details(:contact_email).present? %>
 					
