@@ -55,7 +55,7 @@ end
   # POST /user_details
   # POST /user_details.json
   def create
-    @user_detail = UserDetail.new(params[:user_detail])
+    @user_detail = UserDetail.new(params[:id])
     @user_detail.user = current_user
 	
     respond_to do |format|
