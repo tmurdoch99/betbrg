@@ -9,7 +9,7 @@
 			
 			<% if @profile_complete %>
 			<div class="profile-wrapper">
-			 <%= image_tag(@user_detail.photo, alt: current_user.name, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"69", height:"69") %>
+			 <%= image_tag(@user_detail.user.photo, alt: current_user.name, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"69", height:"69") %>
 			</div>
 			</br>
 			 <% end %>   

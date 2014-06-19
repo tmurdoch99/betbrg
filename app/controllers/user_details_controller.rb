@@ -15,7 +15,7 @@ end
   # GET /user_details
   # GET /user_details.json
   def index
-   @user_detail = UserDetail.find(params[:id])
+   
    @search = UserDetail.search(params[:q])
    @user_details = @search.result
    respond_to do |format|
