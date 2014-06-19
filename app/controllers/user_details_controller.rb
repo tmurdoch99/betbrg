@@ -3,7 +3,7 @@ class UserDetailsController < ApplicationController
   
    
   def sidebar
-    @profile_complete = current_user.user_details(:photo).present?
+    @profile_complete = current_user.user_details(:photo).nil?
   
  end
  
