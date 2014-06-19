@@ -8,17 +8,17 @@
             </div>
             <div class="grid-body no-border">
 			
-			<%= simple_form_for @user_detail, :class => "form-no-horizontal-spacing" do |f| %>
+			<%= simple_form_for @user_detail do |f| %>
                 <%= f.error_notification %>
               <div class="row column-seperation">
                 <div class="col-md-6">
                  <h4>Personal Information</h4>           
                     <div class="row form-row">
                       <div class="col-md-6">
-                         <%= f.input_field :birthdate, as: :bootstrap_datepicker,  label: false, placeholder: 'Your date of birth', :size => '32' %>
+                         <%= f.input_field :birthdate, as: :bootstrap_datepicker,  label: false, placeholder: 'Your date of birth', :size => '32', :required => true %>
                       </div>
                       <div class="col-md-6">
-                     <%= f.input_field :location, label: false, placeholder: 'PostCode', :size => '32'  %> 
+                     <%= f.input_field :location, label: false, placeholder: 'PostCode', :size => '32', :required => true  %> 
                       </div>
                     </div>
                     <div class="row form-row">
@@ -37,10 +37,10 @@
                     
                     <div class="row form-row">
                       <div class="col-md-6">
-                        <%= f.input_field :contact_email , placeholder: 'Contact email ', label: false, :size => '32' %>
+                        <%= f.input_field :contact_email , placeholder: 'Contact email ', label: false, :size => '32', :required => true %>
                       </div>
                       <div class="col-md-6">
-                          <%= f.input_field :contact_number , placeholder: 'Contact number ', label: false, :size => '32' %>
+                          <%= f.input_field :contact_number , placeholder: 'Contact number ', label: false, :size => '32', :required => true %>
                       </div>
                     </div>
 					<div class="row form-row">
@@ -81,20 +81,20 @@
 					
 					<div class="row form-row">
                       <div class="col-md-6">
-                       <%= f.input_field :past_experience, placeholder: 'Previous employee', label: false, :size => '32' %>
+                       <%= f.input_field :past_experience, placeholder: 'Previous employee', label: false, :size => '32', :required => true %>
                       </div>
                       <div class="col-md-6">
-                         <%= f.input :work_sector, collection: [ "Social media promoting", "Bartending", "Waitering/Waitressing", "Sales Assistants", "Supervisor", "Chef", "Kitchen porter", "Cleaner", "Cashier", "Telecommunications", "Festivals"], :prompt => "Employment sector", label: false, :size => '32' %>
+                         <%= f.input :work_sector, collection: [ "Social media promoting", "Bartending", "Waitering/Waitressing", "Sales Assistants", "Supervisor", "Chef", "Kitchen porter", "Cleaner", "Cashier", "Telecommunications", "Festivals"], :prompt => "Employment sector", label: false, :size => '32', :required => true %>
                       </div>
                     </div>
                      <div class="row form-row">
                       <div class="col-md-12">
-                        <%= f.input_field :role, placeholder: 'What was your role at this company', label: false, :size => '78' %>
+                        <%= f.input_field :role, placeholder: 'What was your role at this company', label: false, :size => '78', :required => true %>
                       </div>
                     </div>
 					<div class="row form-row">
                       <div class="col-md-12">
-                        <%= f.input_field :about_role, as: :text, label: false, placeholder: 'About the role (Max 140 words)' , :cols => '75', :rows => '7' %>
+                        <%= f.input_field :about_role, as: :text, label: false, placeholder: 'About the role (Max 300 characters)' , :cols => '75', :rows => '7', :required => true, input_html: { maxlength: 300 } %>
                       </div>
                     </div>
 					<div class="row form-row">
