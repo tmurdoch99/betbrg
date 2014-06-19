@@ -23,7 +23,7 @@
                     </div>
                     <div class="row form-row">
                       <div class="col-md-6">
-                        <%= f.file_field :photo, placeholder: 'Your Picture', :input_html => { :size => '32'} %>
+                        <%= f.file_field :photo, :required => true, :input_html => { :size => '32'} %>
                       </div>
                       <div class="col-md-6">
                          <%= f.input_field :personality_traits, label: false, placeholder: 'Personality traits', :size => '32' %>
@@ -37,10 +37,10 @@
                     
                     <div class="row form-row">
                       <div class="col-md-6">
-                        <%= f.input_field :contact_email , placeholder: 'Contact email ', label: false, :size => '32', :required => true %>
+                        <%= f.input_field :contact_email , placeholder: 'Contact email ', autofocus: true, label: false, :size => '32', :required => true %>
                       </div>
                       <div class="col-md-6">
-                          <%= f.input_field :contact_number , placeholder: 'Contact number ', label: false, :size => '32', :required => true %>
+                          <%= f.input_field :contact_number , :as => :string, placeholder: 'Contact number ', label: false, :size => '32', :required => true %>
                       </div>
                     </div>
 					<div class="row form-row">

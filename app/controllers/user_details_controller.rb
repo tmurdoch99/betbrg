@@ -1,6 +1,7 @@
 class UserDetailsController < ApplicationController
  before_filter :sidebar
   
+   
   def sidebar
     @profile_complete = current_user.user_details(:photo).present?
   
@@ -100,6 +101,7 @@ end
   # GET /user_details/1
   # GET /user_details/1.json
   def profile
+    
     @user_detail = UserDetail.find(params[:id])
     @user_detail.user = current_user
 	

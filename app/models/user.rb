@@ -13,6 +13,6 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :logo, :password, :password_confirmation, :remember_me, :business
   validates_presence_of :name
   has_many :user_details, dependent: :destroy
-  
+  accepts_nested_attributes_for :user_details
  
 end

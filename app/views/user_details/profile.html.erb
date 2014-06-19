@@ -33,7 +33,7 @@
 								<h4 class="semi-bold no-margin"></h4>
 								<h6 class="no-margin">Availble in <%= @user_detail.location %></h6>
 								<br>
-								<p><i class="fa fa-briefcase"></i>Worked in <%= @user_detail.past_experience %></p>
+								<p><i class="fa fa-briefcase"></i>Worked at <%= @user_detail.past_experience %></p>
 								<p><i class="fa fa-globe"></i><%= @user_detail.social_link %></p>
 								<p><i class="fa fa-phone"></i> <%= @user_detail.contact_number %></p>
 								<p><i class="fa fa-envelope"></i> <%= @user_detail.contact_email %></p>
@@ -89,7 +89,7 @@
 				<div class="row">
 				<div class="tiles white col-md-12  no-padding">			
 					<div class="tiles-body">
-						<h5 ><span class="semi-bold"><%=current_user.name %>'s Education</span>&nbsp;&nbsp;</h5>
+						<h5 ><span class="semi-bold"><%=  %>'s Education</span>&nbsp;&nbsp;</h5>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="friend-list">
@@ -156,7 +156,7 @@
                 <div class="row column-seperation">
                   <div class="col-md-6">
                     <h3>I worked at <span class="semi-bold"><%= @user_detail.past_experience %></span> for around <span class="semi-bold"> 
-                      <%= @user_detail.role_length %></span></h3>
+                      <%= @user_detail.role_length %></span> months</h3>
                   </div>
                   <div class="col-md-6">
                     <h3 class="semi-bold">What i brought to the job...</h3>
