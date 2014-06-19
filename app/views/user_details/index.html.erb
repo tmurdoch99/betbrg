@@ -35,8 +35,8 @@
                     </div>
                       <div class="row form-row">
                          <div class="col-md-6">
-                            <%= f.label :past_experience_cont, "Past experience" %>
-                            <%= f.select :past_experience_cont, [ "Social media promoting", "Bartending", "Waitering/Waitressing", "Sales Assistants", "Supervisor", "Chef", "Kitchen porter", "Cleaner", "Cashier", "Telecommunications", "Festivals"], label: false, wrapper: false, :size => '32', :input_html => { :id => 'source'}, include_blank: true, :multiple => true %>
+                            <%= f.label :work_sector_cont, "Past experience" %>
+                            <%= f.select :work_sector_cont, [ "Social media promoting", "Bartending", "Waitering/Waitressing", "Sales Assistants", "Supervisor", "Chef", "Kitchen porter", "Cleaner", "Cashier", "Telecommunications", "Festivals"], label: false, wrapper: false, :size => '32', :input_html => { :id => 'source'}, include_blank: true, :multiple => true %>
                          </div>
 						</div> 
 						<br><br>
@@ -88,7 +88,7 @@
                                 <% @user_details.each do |user_detail| %>
                                             <tr>
                                                 <td class="v-align-middle">
-                                                 <%= link_to image_tag(user_detail.photo, alt: user_detail.user.name, data: { src: "user_detail.photo", src_retina: "user_detail.photo" }, width:"69", height:"69"), :controller => "user_details", :action => "profile", :id => user_detail.id %>    
+                                                 <%= link_to image_tag(user_detail.photo,   data: { src: "user_detail.photo", src_retina: "user_detail.photo" }, width:"69", height:"69"), :controller => "user_details", :action => "profile", :id => user_detail.id %>    
                                                 </td>
                                                 <td class="v-align-middle"> <%= user_detail.user.name %> </td>
                                                 <td class="v-align-middle"><span class="muted"><%= user_detail.location %> </span>
