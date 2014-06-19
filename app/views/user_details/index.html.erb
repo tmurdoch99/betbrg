@@ -88,7 +88,7 @@
                                 <% @user_details.each do |user_detail| %>
                                             <tr>
                                                 <td class="v-align-middle">
-                                                 <%= link_to image_tag(user_detail.photo,   data: { src: "user_detail.photo", src_retina: "user_detail.photo" }, width:"69", height:"69"), :controller => "user_details", :action => "profile", :id => user_detail.id %>    
+                                                 <%= link_to image_tag(user_detail.photo, alt: user_detail.user.name, data: { src: "user_detail.photo", src_retina: "user_detail.photo" }, width:"69", height:"69"), :controller => "user_details", :action => "profile", :id => user_detail.id %>    
                                                 </td>
                                                 <td class="v-align-middle"> <%= user_detail.user.name %> </td>
                                                 <td class="v-align-middle"><span class="muted"><%= user_detail.location %> </span>
