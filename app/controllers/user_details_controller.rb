@@ -60,7 +60,7 @@ end
 	
     respond_to do |format|
       if @user_detail.save
-        format.html { redirect_to action: "profile", notice: 'User detail was successfully created.' }
+        format.html { redirect_to @user_detail, notice: 'User detail was successfully created.' }
         format.json { render json: @user_detail, status: :created, location: @user_detail }
       else
         format.html { render action: "new", notice: 'User detail was unsuccessfully created.'}
