@@ -101,7 +101,7 @@ end
   # GET /user_details/1
   # GET /user_details/1.json
   def profile
-    
+    @user = UserDetail.find(params[:id])
     @user_detail = UserDetail.find(params[:id])
     @user_detail.user = current_user
 	
