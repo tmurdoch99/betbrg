@@ -18,7 +18,7 @@
                          <%= f.input_field :birthdate, as: :bootstrap_datepicker,  label: false, placeholder: 'Your date of birth', :size => '32', :required => true %>
                       </div>
                       <div class="col-md-6">
-                     <%= f.input_field :location, label: false, placeholder: 'PostCode', :size => '32', :required => true  %> 
+                     <%= f.input :location, collection: [ "Manchester", "Liverpool", "Leeds", "Birmingham", "London", "Newcastle", "Bristol", "Nottingham", "Sheffield"], label: false, :prompt => 'PostCode', wrapper: false, :size => '32', :input_html => { :id => 'source'}, :required => true %> 
                       </div>
                     </div>
                     <div class="row form-row">

@@ -13,12 +13,12 @@
 		            <div class="row form-row">
                       <div class="col-md-6">
 					    <%= f.label :location_cont, "Enter vacancy location" %>
-                        <%= f.text_field :location_cont, :size => '28' %>
+                        <%= f.select :location_cont, [ "Manchester", "Liverpool", "Leeds", "Birmingham", "London", "Newcastle", "Bristol", "Nottingham", "Sheffield"],  :size => '34', :input_html => { :id => 'source'}, include_blank: true %>
                       </div>
                     </div> 
                     <div class="row form-row">
                       <div class="col-md-6">
-					     <%= f.label :past_experience_cont, "University course" %>
+					     <%= f.label :course_cont, "University course" %>
                          <%= f.select :course_cont, [ "History", "Media", "English", "Maths", "Art", "Science", "Sport", "Business"],  :size => '34', :input_html => { :id => 'source'}, include_blank: true %>
                       </div>
                     </div>
