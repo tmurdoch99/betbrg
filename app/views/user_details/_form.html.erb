@@ -4,7 +4,7 @@
           <div class="grid simple">
             <div class="grid-title no-border">
               <h4>Your <span class="semi-bold">Profile</span></h4>
-              <div class="tools">  <a href="javascript:;" class="remove"></a> </div>
+             <p>Please fill out the form below, fill out as much as possible so potential employers can get the best picture possible.</p>
             </div>
             <div class="grid-body no-border">
 			
@@ -18,12 +18,13 @@
                          <%= f.input_field :birthdate, as: :bootstrap_datepicker,  label: false, placeholder: 'Your date of birth', :size => '32', :required => true %>
                       </div>
                       <div class="col-md-6">
-                     <%= f.input :location, collection: [ "Manchester", "Liverpool", "Leeds", "Birmingham", "London", "Newcastle", "Bristol", "Nottingham", "Sheffield"], label: false, :prompt => 'PostCode', wrapper: false, :size => '32', :input_html => { :id => 'source'}, :required => true %> 
+                     <%= f.input :location, collection: [ "Manchester", "Liverpool", "Leeds", "Birmingham", "London", "Newcastle", "Bristol", "Nottingham", "Sheffield"], label: false, :prompt => 'Location', wrapper: false, :size => '32', :input_html => { :id => 'source'}, :required => true %> 
                       </div>
                     </div>
                     <div class="row form-row">
                       <div class="col-md-6">
-                        <%= f.file_field :photo, :required => true, :input_html => { :size => '32'} %>
+					   
+                        <%= f.file_field :photo, :required => true, :input_html => { :size => '32'}, :required => true  %>
                       </div>
                       <div class="col-md-6">
                          <%= f.input_field :personality_traits, label: false, placeholder: 'Personality traits', :size => '32' %>
@@ -31,16 +32,16 @@
                     </div>
                     <div class="row form-row">
                       <div class="col-md-12">
-                        <%= f.input_field :about_me, as: :text, label: false, placeholder: 'About Me (Max 300 words)' , :cols => '75', :rows => '7' %>
+                        <%= f.input_field :about_me, as: :text, label: false, placeholder: 'About Me (Max 300 words)' , :cols => '75', :rows => '7', :required => true %>
                       </div>
                     </div>
                     
                     <div class="row form-row">
                       <div class="col-md-6">
-                        <%= f.input_field :contact_email , placeholder: 'Contact email ', autofocus: true, label: false, :size => '32', :required => true %>
+                        <%= f.input_field :contact_email , placeholder: 'Contact email ', :required => true , autofocus: true, label: false, :size => '32' %>
                       </div>
                       <div class="col-md-6">
-                          <%= f.input_field :contact_number , :as => :string, placeholder: 'Contact number ', label: false, :size => '32', :required => true %>
+                          <%= f.input_field :contact_number , :as => :string, :required => true, placeholder: 'Contact number ', label: false, :size => '32' %>
                       </div>
                     </div>
 					<div class="row form-row">
@@ -73,7 +74,7 @@
                         <%= f.input_field :university, placeholder: 'Your University', label: false, :size => '32' %>
                       </div>
                       <div class="col-md-6">
-                        <%= f.input :course, collection: [ "History", "Media", "English", "Maths", "Art", "Science", "Sport", "Business"], :prompt => "Course sector", label: false, wrapper: false, :size => '32', :input_html => { :id => 'source'} %> 
+                        <%= f.input :course, collection: [ "History", "Media", "English", "Maths", "Art", "Science", "Sport", "Business"], :prompt => "Course sector", :required => true , label: false, wrapper: false, :size => '32', :input_html => { :id => 'source'} %> 
                       </div>
                     </div>
 					
@@ -81,7 +82,7 @@
 					
 					<div class="row form-row">
                       <div class="col-md-6">
-                       <%= f.input_field :past_experience, placeholder: 'Previous employee', label: false, :size => '32', :required => true %>
+                       <%= f.input_field :past_experience, :required => true, placeholder: 'Previous employee', label: false, :size => '32' %>
                       </div>
                       <div class="col-md-6">
                          <%= f.input :work_sector, collection: [ "Social media promoting", "Bartending", "Waitering/Waitressing", "Sales Assistants", "Supervisor", "Chef", "Kitchen porter", "Cleaner", "Cashier", "Telecommunications", "Festivals"], :prompt => "Employment sector", label: false, :size => '32', :required => true %>
@@ -89,20 +90,20 @@
                     </div>
                      <div class="row form-row">
                       <div class="col-md-12">
-                        <%= f.input_field :role, placeholder: 'What was your role at this company', label: false, :size => '78', :required => true %>
+                        <%= f.input_field :role, :required => true, placeholder: 'What was your role at this company', label: false, :size => '78', :required => true %>
                       </div>
                     </div>
 					<div class="row form-row">
                       <div class="col-md-12">
-                        <%= f.input_field :about_role, as: :text, label: false, placeholder: 'About the role (Max 300 characters)' , :cols => '75', :rows => '7', :required => true, input_html: { maxlength: 300 } %>
+                        <%= f.input_field :about_role, as: :text, label: false, :required => true, placeholder: 'About the role (Max 300 characters)' , :cols => '75', :rows => '7', :required => true, input_html: { maxlength: 300 } %>
                       </div>
                     </div>
 					<div class="row form-row">
                       <div class="col-md-6">
-                         <%= f.input_field :role_length , placeholder: 'Length at employee (in months)', label: false, :size => '32'  %>
+                         <%= f.input_field :role_length, :required => true, placeholder: 'Length at employee (in months)', label: false, :size => '32'  %>
                       </div>
                       <div class="col-md-6">
-                        <%= f.input_field :reference_details_1 , placeholder: 'Reference contact email', label: false, :size => '32' %>
+                        <%= f.input_field :reference_details_1, :required => true , placeholder: 'Reference contact email', label: false, :size => '32' %>
                       </div>
                     </div>
                     

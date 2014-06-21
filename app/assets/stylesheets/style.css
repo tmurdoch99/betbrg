@@ -161,7 +161,7 @@ Page sidebar
 
 .page-sidebar.mini  .page-sidebar-wrapper > ul > li >a:hover, 
 .page-sidebar.mini  .page-sidebar-wrapper > ul > li:hover >a {  
-  background: #0b9c8f;
+  background: #74b33f;
 }
 .page-sidebar.mini .page-sidebar-wrapper  > ul > li > ul.sub-menu{
 	position:absolute;
@@ -441,7 +441,7 @@ blockquote small{
 	color:#8b91a0 !important;
 }
 .text-success{
-	color:#0AA699 !important;
+	color:#74b33f !important;
 }
 .text-info{
 	color:#0090D9 !important;
@@ -3536,7 +3536,7 @@ form legend,.form-view legend {
    background-color:transparent;
 } 
 .grid.simple.vertical.green{
- border-left:4px solid #0aa699;
+ border-left:4px solid #74b33f;
  border-top:none !important;
 }
 .grid.simple.vertical.red{
@@ -4696,10 +4696,10 @@ border:0;
 }
 .btn-primary{
 	color: #fff;
-    background-color: #0aa699;
+    background-color: #74b33f;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
-    background-color: #0b9c8f;
+    background-color: #74b33f;
 }
 .btn-success{
 	color: #fff;
@@ -4796,7 +4796,7 @@ border:0;
     background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-    background-color: #0b9c8f;
+    background-color: #74b33f;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
     background-color: #fbc01e;
