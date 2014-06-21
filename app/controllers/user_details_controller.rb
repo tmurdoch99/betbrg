@@ -8,9 +8,8 @@ class UserDetailsController < ApplicationController
  end
  
  def age(birthdate)
-  @birthdate = UserDetail.find(params[:birthdate])
-  @now = Time.now.utc.to_date
-  @age = @now.year - @birthdate.year - ((@now.month > @birthdate.month || (@now.month == @birthdate.month && @now.day >= @birthdate.day)) ? 0 : 1)
+  now = Time.now.utc.to_date
+   now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
 end
  
   # GET /user_details

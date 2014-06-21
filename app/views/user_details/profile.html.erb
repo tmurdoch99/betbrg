@@ -144,33 +144,35 @@
 			</div>
 		
 		 
-        <div class="col-md-6">
-		<div class="row">
-          <div class="grid simple horizontal red">
-            <div class="grid-body">
-              <div >
-                <h4>Work<span class="semi-bold">Experience</span></h4 >
-                <p>I worked at <%= @user_detail.past_experience %> for around <%= @user_detail.role_length %></span> months</p>
-                <p> My role at <%= @user_detail.past_experience %> was as in the area of <%= @user_detail.work_sector %>. More specifically my role was <%= @user_detail.role %>, Here's a small summary of my role; <%= @user_detail.about_role %> < </p>
-                 <p><i class="fa fa-envelope"></i> Reference Email <%= @user_detail.reference_details_1 %></p>
+       <div class="col-md-6">
+	      <div class="row">
+            <div class="grid simple horizontal red">
+                <div class="grid-title ">
+                  <h4>Work Experience</h4>
+                </div>
+              <div class="grid-body">
+               <div >
+                  <p>I worked at <%= @user_detail.past_experience %> for around <%= @user_detail.role_length %></span> months</p>
+                  <p> My role at <%= @user_detail.past_experience %> was as in the area of <%= @user_detail.work_sector %>. More specifically my role was <%= @user_detail.role %>, Here's a small summary of my role; <%= @user_detail.about_role %> </p>
+                  <p><i class="fa fa-envelope"></i> Reference Email <%= @user_detail.reference_details_1 %></p>
 			  
-			  
-			  </div>
+			   </div>
+              </div>
             </div>
-          </div>
 		  </div>
-		  
-       <div class="col-md-12">
-	   <div class="row">
+		</div>
+		
+       <div class="col-md-6">
+	      <div class="row">
 				<div class="grid simple vertical green">
                     <div class="grid-title no-border">
 						<h5 >Other<span class="semi-bold">&nbsp;&nbsp;Information</span>&nbsp;&nbsp;</h5>
 						<div class="grid-body no-border">
-              <div class="row-fluid">
+                            <div class="row-fluid">
                               <div class="checkbox check-primary">
 							   <br>
-                     <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
-                      <label for="check1">Driving License</label>
+                                  <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
+                            <label for="check1">Driving License</label>
                       <br>
                       <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
                       <label for="check2">Access to a car</label>
