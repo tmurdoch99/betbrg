@@ -51,9 +51,10 @@
                     </div>
 					<div class="row-fluid">
 					  
-                      <div class="checkbox check-primary">
-                      <%=  f.input_field :driving_license, inline_label: 'I have a UK Driving License',label: false, wrapper: false  %>
-                      </div>
+                      
+					  <%= f.input_field :driving_license, as: :boolean, boolean_style: :inline, :hint => 'I have a Uk driving license', :label => false %>
+                    
+                      
                     
 					<div class="checkbox check-primary">
                       <%= f.input_field :car, as: :boolean, inline_label:'I have access to a car',label: false   %>
