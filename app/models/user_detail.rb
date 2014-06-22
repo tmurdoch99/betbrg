@@ -5,4 +5,13 @@ class UserDetail < ActiveRecord::Base
   belongs_to :user
   mount_uploader :photo, AvatarUploader
   
+  def age
+
+dob = read_attribute(:birthdate)
+now = Time.now.utc.to_date
+now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+
+end 
+  
+  
   end
