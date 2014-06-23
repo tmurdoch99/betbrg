@@ -25,7 +25,7 @@ Zipwire::Application.routes.draw do
     root :to => 'user_details#index'
 	
   end
-  root :to => 'public#home'
+  root :to => 'home#home'
   
  
  

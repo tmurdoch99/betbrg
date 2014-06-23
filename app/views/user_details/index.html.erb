@@ -22,17 +22,7 @@
                          <%= f.select :course_cont, [ "History", "Media", "English", "Maths", "Art", "Science", "Sport", "Business"],  :size => '34', :input_html => { :id => 'source'}, include_blank: true %>
                       </div>
                     </div>
-                     <div class="row form-row">
-                        <div class="col-md-6">
-                               <%= f.label :birthdate_gteq, "Age group" %>
-                              <%= f.text_field :birthdate_gteq, placeholder: 'Aged between....', :size => '28'  %>
-	                    </div>
-                             <div class="col-md-6">
-                           <div style="height:25px;">
-						   </div>
-                             <%= f.text_field :birthdate_lteq, placeholder: 'And', :size => '28' %>    
-                              </div>
-                    </div>
+                    
                       <div class="row form-row">
                          <div class="col-md-6">
                             <%= f.label :work_sector_cont, "Past experience" %>
@@ -80,7 +70,6 @@
                                                 <th style="width:10%">Name</th>
                                                 <th style="width:10%">Location</th>
 												<th style="width:10%">Uni course</th>
-                                                <th style="width:4%">Age</th>
                                                 <th style="width:18%">Past experience</th>
                                             </tr>
                                         </thead>
@@ -95,10 +84,7 @@
                                                  </td>
                                                 <td><span class="muted"><%= user_detail.course %></span>
                                                 </td>
-												</td>
-                                                <td><span class="muted"><%= @user_detail.age %> </span>
-                                                </td>
-                                                <td class="v-align-middle">
+												<td class="v-align-middle">
                                                     <%= user_detail.work_sector %>
                                                 </td>
                                             </tr>
