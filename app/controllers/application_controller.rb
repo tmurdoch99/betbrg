@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   @is_biz = current_user.user(:business).nil?
   end
   end
+  def after_sign_in_path_for(user_detail)
+  current_user_path
+end
+  
 end
