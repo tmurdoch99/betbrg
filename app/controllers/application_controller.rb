@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
   end
   def after_sign_in_path_for(user_detail)
-  user_detail_path
+  user_detail_path(current_user.user_details(:id))
 end
   
 end
