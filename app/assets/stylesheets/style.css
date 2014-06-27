@@ -318,7 +318,7 @@ h1.block, h2.block, h3.block, h4.block, h5.block, h6.block {
 
 a {
   text-shadow: none !important;
-  color: #0d638f;
+  color: #213647;
   transition: color 0.1s linear 0s,background-color 0.1s linear 0s  !important;
 }
 
@@ -7256,9 +7256,9 @@ table.fc-border-separate{
 .user-profile-pic img{
 	border-radius: 100px 100px 100px 100px;
     display: inline-block;
-    height: 89px;
+    height: 109px;
     overflow: hidden;
-    width: 89px;
+    width: 109px;
 	border:5px solid #fff;
 	background-color:#e5e9ec;	
 }

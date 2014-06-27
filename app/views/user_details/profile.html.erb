@@ -19,7 +19,7 @@
 						<div class="row">
 							<div class="col-md-3 col-sm-3" >
 								<div class="user-profile-pic">	
-									<%= image_tag(@user_detail.photo, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"89", height:"89") %>
+									<%= image_tag(@user_detail.photo, data: { src: "@user_detail.photo", src_retina: "@user_detail.photo" }, width:"109", height:"109") %>
 								</div>
 								 <div class="user-mini-description">
 									<h3 class="text-success semi-bold">
@@ -36,7 +36,7 @@
 								<p><i class="fa fa-briefcase"></i>Worked at <%= @user_detail.past_experience %></p>
 								<p><i class="fa fa-globe"></i><a href="<%= @user_detail.social_link %>"><%= @user_detail.social_link %></a></p>
 								<p><i class="fa fa-phone"></i> <%= @user_detail.contact_number %></p>
-								<p><i class="fa fa-envelope"></i><a href="mailto:<%= @user_detail.contact_email %>"> <%= @user_detail.contact_email %></p>
+								<p><i class="fa fa-envelope"></i><a href="mailto:<%= @user_detail.contact_email %>"> <%= @user_detail.contact_email %></a></p>
 							</div>
 							<div class="col-md-3  col-sm-3">
 								
@@ -189,7 +189,7 @@
                       <label for="check2">I Have access to a car</label>
                              </div>
 							 
-							   <br>
+							  
 							    <% else %>
 					  <div class="checkbox check-danger">
                       <input id="check2" name="check" value="check2" checked="checked" disabled="disabled" type="checkbox">
