@@ -19,7 +19,7 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
   gem 'ransack'
   gem 'twitter'
-  gem 'sqlite3'
+  gem 'pg'
   gem 'rails_12factor', '0.0.2'
   gem 'activerecord-postgresql-adapter'
   gem 'bcrypt-ruby'
