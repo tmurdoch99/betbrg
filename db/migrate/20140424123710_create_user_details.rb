@@ -18,4 +18,4 @@ class CreateUserDetails < ActiveRecord::Migration
       t.timestamps
     end
   end
-end
+end     
