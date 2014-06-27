@@ -34,9 +34,9 @@
 								<h6 class="no-margin">Availble in <%= @user_detail.location %></h6>
 								<br>
 								<p><i class="fa fa-briefcase"></i>Worked at <%= @user_detail.past_experience %></p>
-								<p><i class="fa fa-globe"></i><%= @user_detail.social_link %></p>
+								<p><i class="fa fa-globe"></i><a href="<%= @user_detail.social_link %>"><%= @user_detail.social_link %></a></p>
 								<p><i class="fa fa-phone"></i> <%= @user_detail.contact_number %></p>
-								<p><i class="fa fa-envelope"></i> <%= @user_detail.contact_email %></p>
+								<p><i class="fa fa-envelope"></i><a href="mailto:<%= @user_detail.contact_email %>"> <%= @user_detail.contact_email %></p>
 							</div>
 							<div class="col-md-3  col-sm-3">
 								
@@ -154,7 +154,7 @@
                <div >
                   <p>I worked at <%= @user_detail.past_experience %> for around <%= @user_detail.role_length %></span> months</p>
                   <p> My role at <%= @user_detail.past_experience %> was as in the area of <%= @user_detail.work_sector %>. More specifically my role was <%= @user_detail.role %>, Here's a small summary of my role; <%= @user_detail.about_role %> </p>
-                  <p><i class="fa fa-envelope"></i> Reference Email <%= @user_detail.reference_details_1 %></p>
+                  <p><i class="fa fa-envelope"></i> Reference Email <a href="mailto:<%= @user_detail.reference_details_1 %>"><%= @user_detail.reference_details_1 %></a></p>
 			  
 			   </div>
               </div>

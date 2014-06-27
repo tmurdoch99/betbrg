@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140627151102) do
+ActiveRecord::Schema.define(:version => 20140627154151) do
 
   create_table "bets", :force => true do |t|
     t.string   "name"
@@ -165,7 +165,6 @@ ActiveRecord::Schema.define(:version => 20140627151102) do
     t.string   "photo"
     t.string   "reference_details_1"
     t.string   "reference_details_2"
-    t.integer  "contact_number"
     t.string   "contact_email"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
@@ -180,6 +179,7 @@ ActiveRecord::Schema.define(:version => 20140627151102) do
     t.boolean  "criminal_conviction"
     t.string   "role"
     t.string   "logo"
+    t.string   "contact_number"
   end
 
   create_table "users", :force => true do |t|
