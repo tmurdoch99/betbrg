@@ -335,7 +335,7 @@ DEPENDENCIES
   factory_girl_rails
   faker (= 1.1.2)
   figaro
-  fog
+  fog (>= 1.15.0)
   font-awesome-rails
   hub
   jquery-rails
