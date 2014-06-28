@@ -20,6 +20,7 @@ group :assets do
   gem 'ransack'
   gem 'twitter'
   gem 'pg'
+  gem 'fog'
   gem 'rails_12factor', '0.0.2'
   gem 'activerecord-postgresql-adapter'
   gem 'bcrypt-ruby'
