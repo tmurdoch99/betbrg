@@ -5,7 +5,7 @@ Zipwire::Application.routes.draw do
   resources :users
    
    end
-
+resources :users
   match '/profile/:id', :to => 'user_details#profile', as: 'profile' 
   
   match '/profile/:id', :to => 'user_details#profile', as: 'view_profile'   
