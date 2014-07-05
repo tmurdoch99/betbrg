@@ -118,8 +118,11 @@ class UserDetailsController < ApplicationController
   end
   
   def age
-    now = Time.now.utc.to_date
-    now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
-end
+
+dob = read_attribute(:birthdate)
+now = Time.now.utc.to_date
+now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+
+end 
   
 end
