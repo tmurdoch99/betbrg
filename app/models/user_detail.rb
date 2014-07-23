@@ -13,5 +13,12 @@ now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.
 
 end 
   
-  
+scope :age_between, lambda{|from_age, to_age|
+  if from_age.present? and to_age.present?
+    where( :birthdate =>  (Date.today - to_age.to_i.year)..(Date.today - from_age.to_i.year) )
+  end
+}  
+ransacker :age, :formatter => proc {|v| Date.today - v.to_i.year} do |parent|
+  parent.table[:birthdate]
+end   
   end
