@@ -4,7 +4,7 @@ class UserDetail < ActiveRecord::Base
   validates :about_me, :birthdate, :contact_email, :contact_number, :course, :past_experience, :personality_traits, :photo, :reference_details_1, :university, :location, :work_sector, :location, :role, :about_role, :role_length, presence: true
   belongs_to :user
   mount_uploader :photo, AvatarUploader
-  
+ 
   def age
 
 dob = read_attribute(:birthdate)
@@ -13,11 +13,7 @@ now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.
 
 end 
   
-scope :age_between, lambda{|from_age, to_age|
-  if from_age.present? and to_age.present?
-    where( :birthdate =>  (Date.today - to_age.to_i.year)..(Date.today - from_age.to_i.year) )
-  end
-}  
+
 ransacker :age, :formatter => proc {|v| Date.today - v.to_i.year} do |parent|
   parent.table[:birthdate]
 end   
