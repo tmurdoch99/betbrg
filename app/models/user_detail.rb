@@ -1,6 +1,6 @@
 class UserDetail < ActiveRecord::Base
   validates :user_id, presence: true
-  attr_accessible :about_me, :birthdate, :contact_email, :contact_number, :course, :ethnicity, :past_experience, :personality_traits, :photo, :reference_details_1, :reference_details_2, :university, :location, :social_link, :driving_license, :car, :work_sector, :location, :role, :about_role, :role_length, :criminal_conviction
+  attr_accessible :about_me, :age, :birthdate, :contact_email, :contact_number, :course, :ethnicity, :past_experience, :personality_traits, :photo, :reference_details_1, :reference_details_2, :university, :location, :social_link, :driving_license, :car, :work_sector, :location, :role, :about_role, :role_length, :criminal_conviction
   validates :about_me, :birthdate, :contact_email, :contact_number, :course, :past_experience, :personality_traits, :photo, :reference_details_1, :university, :location, :work_sector, :location, :role, :about_role, :role_length, presence: true
   belongs_to :user
   mount_uploader :photo, AvatarUploader
