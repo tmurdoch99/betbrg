@@ -14,7 +14,7 @@ class UserDetailsController < ApplicationController
    
    @search = UserDetail.search(params[:q])
    @user_details = @search.result
-   @user_detail = UserDetail.find(params[:id])
+   
    respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @user_details }
