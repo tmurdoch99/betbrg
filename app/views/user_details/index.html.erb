@@ -22,8 +22,8 @@
                          <%= f.select :course_cont, [ "History", "Media", "English", "Maths", "Art", "Science", "Sport", "Business"],  :size => '34', :input_html => { :id => 'source'}, include_blank: true %>
                       </div>
                     </div>
-                    <%= f.label :age_lteq, "aged between" %>
-    <%= f.text_field :age_gteq %>
+                    <%= f.label :age_gteq, "aged between" %>
+    <%= f.text_field :age_lteq %>
     <%= f.label :age_lteq, "and" %>
     <%= f.text_field :age_gteq %> 
                       <div class="row form-row">
@@ -91,7 +91,7 @@
                                                  </td>
 												<td><span class="muted"><%= user_detail.course %></span>
                                                 </td>
-												<td><span class="muted"><%= %></span>
+												<td><span class="muted"><%= user_detail.age %></span>
                                                 </td>
 												<td class="v-align-middle">
                                                     <%= user_detail.work_sector %>
