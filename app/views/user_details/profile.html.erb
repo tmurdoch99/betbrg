@@ -154,8 +154,8 @@
                <div >
 			   <ul>
                   <li>I worked at <%= @user_detail.past_experience %> for around <%= @user_detail.role_length %></span> months</li>
-                  <li> My role was as a <%= @user_detail.work_sector %>. </li>
-                  <li> My role entailed; <%= @user_detail.about_role %> </li>
+                  <li> Role: <%= @user_detail.work_sector %>. </li>
+                  <li>Job specifics <%= @user_detail.about_role %> </li>
                   <li><i class="fa fa-envelope"></i> Reference Email <a href="mailto:<%= @user_detail.reference_details_1 %>"><%= @user_detail.reference_details_1 %></li>
 			  </ul>
 			   </div>
