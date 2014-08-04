@@ -1,4 +1,4 @@
- <div class="content">
+  <div class="content">
 <div class="row">
         <div class="col-md-12">
           <div class="grid simple">
@@ -23,14 +23,16 @@
                       </div>
                     </div>
                     <div class="row form-row">
+					 <h4 style="font-size:13px; padding-left:17px;"><span class="help">Upload your photo</span></h4>
                       <div class="col-md-6">
 					   
-                        <%= f.file_field :photo, :required => true, :input_html => { :size => '32'}, :required => true  %>
+                        <%= f.file_field :photo, :required => true, :input_html => { :size => '32'}, :required => true %>
                       </div>
                       <div class="col-md-6">
                          <%= f.input_field :personality_traits, label: false, placeholder: 'Personality traits', :size => '32' %>
                       </div>
                     </div>
+					 
                     <div class="row form-row">
                       <div class="col-md-12">
                         <%= f.input_field :about_me, as: :text, label: false, placeholder: 'About Me (Max 300 words)' , :cols => '75', :rows => '7', :required => true %>
