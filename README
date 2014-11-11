@@ -1,11 +1,6 @@
 Betbrg
 ========================
-
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.io/
-
+[ ![Codeship Status for tmurdoch99/betbrg](https://codeship.com/projects/5211d640-4c28-0132-6d7e-327e770453e0/status)](https://codeship.com/projects/46992)
 ________________________
 
 Recipes:
